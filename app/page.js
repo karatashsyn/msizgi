@@ -5,6 +5,11 @@ import FourthSection from "@/views/home/FourthSection";
 import FifthSection from "@/views/home/FifthSection";
 import SixthSection from "@/views/home/SixthSection";
 
+export const metaData = {
+  title: "MSI Diş Kliniği",
+  description: "MSI Diş Kliniği",
+};
+
 export default function Home() {
   return (
     <main className="animate-fade-in-up relative">
@@ -16,10 +21,6 @@ export default function Home() {
           height: "100%",
         }}
       ></div>
-      {/* <Head>
-        <title>{t("meta_title_home")}</title>
-        <meta name="description" content={t("meta_description_home")} />
-      </Head> */}
       <div className="relative ">
         <HeroSection />
         <SecondSection />

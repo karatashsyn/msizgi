@@ -1,11 +1,10 @@
 import "./globals.css";
 import Navbar from "@/components/composite/Navbar";
 import Footer from "@/components/composite/Footer";
-import PaddedContainer from "@/components/composite/PaddedContainer";
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "MSI Diş Kliniği",
+  description: "Selamlar",
   twitter: {
     card: "summary_large_image",
   },

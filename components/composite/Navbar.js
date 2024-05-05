@@ -28,7 +28,7 @@ export default function Navbar() {
   const { width } = useWidth();
   const navItems = [
     { name: "home", route: "/" },
-    { name: "aboutUs", route: "/about-us" },
+    { name: "aboutUs", route: "/hakkimizda" },
     { name: "treatments", route: "/tedaviler" },
     { name: "team", route: "/ekibimiz" },
     { name: "blog", route: "/blog" },

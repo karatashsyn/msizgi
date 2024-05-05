@@ -80,7 +80,10 @@ export default function HeroSection() {
                 "Hayat keşfetmekle başlar. Sınırları aş, özgürlüğün keyfini çıkar.<br/>Her adımda, her başarıda gülümse.",
             }}
           ></p>
-          <AppointmentButton text={"Randevu Al"} />
+          <AppointmentButton
+            className={"!mt-[4.3rem] bg-[#F08F8C]"}
+            text={"Randevu Al"}
+          />
           <div className="mt-[3.9rem] flex  items-center gap-[1rem]">
             <div className="px-[1.8rem] pt-[2rem] lg:rounded-tl-[30px] h-[8.3rem] w-[14rem] lg:rounded-br-[30px] bg-white">
               <h3 className="mb-[1.2rem] leading-[0] font-semibold text-[1.2rem]">
