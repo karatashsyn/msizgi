@@ -5,7 +5,7 @@ export default function BlogCard({ title, date, description }) {
   return (
     <div className="max-w-[19rem] cursor-pointer">
       <img
-        className="object-center object-cover rounded-tl-md rounded-br-md w-full mb-[0.75rem] !aspect-[3/2]"
+        className="object-center  object-cover rounded-tl-md rounded-br-md w-full mb-[0.75rem] !aspect-[3/2]"
         src="/images/abouttemp.png"
         alt=""
       />

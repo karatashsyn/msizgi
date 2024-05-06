@@ -44,7 +44,12 @@ export default function Contact() {
       </div>
       <section className="mt-[9.75rem] mb-[5rem]">
         <div className="w-full flex px-24 gap-[3rem] justify-center items-start">
-          <div className="grid grid-cols-2 gap-[1rem] ">
+          <div
+            className="grid grid-cols-2 gap-[1rem] "
+            style={{
+              rowGap: "2rem",
+            }}
+          >
             <BlogCard
               title="Pedodonti Nedir?"
               date="15 Nisan 2024"

@@ -18,7 +18,7 @@ export default function EmployeeCard({
         <h1 className="font-bold leading-[1rem] text-[#1B262C] text-[1.2rem] mb-[0.32rem] ">
           {name}
         </h1>
-        <h2 className="text-[0.85rem] leading-[1rem] font-bold text-primary mb-[0.462rem]">
+        <h2 className="text-[#FF8989] text-[0.85rem] leading-[1rem] font-bold text-primary mb-[0.462rem]">
           {position}
         </h2>
         <p className="text-[#52575D] leading-[1rem] text-[0.85rem]">

@@ -1,51 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { usePathname, useParams } from "next/navigation";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 
 import PaddedContainer from "./PaddedContainer";
 import useWidth from "@/hooks/useWidth";
-// import FlagTR from "../icons/FlagTR";
-// import FlagBg from "../icons/FlagBg";
-// import FlagGb from "../icons/FlagGb";
-// import FlagRu from "../icons/FlagRu";
-// import FlagSa from "../icons/FlagSa";
-// import {
-//   Dropdown,
-//   DropdownTrigger,
-//   DropdownMenu,
-//   DropdownSection,
-//   DropdownItem,
-//   Button,
-// } from "@nextui-org/react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
-  const activeRoute = usePathname();
-
+  const { locale } = useParams();
+  const fullRoute = usePathname();
+  const activeRoute = useMemo(() => {
+    return fullRoute === "/" + locale || !fullRoute
+      ? "/"
+      : fullRoute.split("/").pop();
+  }, [fullRoute, locale]);
   const [navHidden, setNavHidden] = useState(false);
   const { width } = useWidth();
+  const { t } = useTranslation("common");
   const navItems = [
     { name: "home", route: "/" },
-    { name: "aboutUs", route: "/hakkimizda" },
-    { name: "treatments", route: "/tedaviler" },
-    { name: "team", route: "/ekibimiz" },
-    { name: "blog", route: "/blog" },
-    { name: "contact", route: "/iletisim" },
+    { name: "aboutUs", route: "hakkimizda" },
+    { name: "treatments", route: "tedaviler" },
+    { name: "team", route: "ekibimiz" },
+    { name: "blog", route: "blog" },
+    { name: "contact", route: "iletisim" },
   ];
-  const handleNavVisibility = () => {
-    let currentPos = window.scrollY;
-    window.onscroll = () => {
-      const freshPos = window.scrollY;
-      if (freshPos > currentPos && freshPos > 200) {
-        setNavHidden(true);
-      } else {
-        if (freshPos < 200) setNavHidden(false);
-      }
-      currentPos = freshPos;
-    };
-  };
 
   useEffect(() => {
     if (width > 768) {
@@ -53,9 +35,6 @@ export default function Navbar() {
     }
   }, [width]);
 
-  useEffect(() => {
-    handleNavVisibility();
-  }, []);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const toggleMobileNav = () => {
     setMobileNavOpen(!mobileNavOpen);
@@ -90,22 +69,22 @@ export default function Navbar() {
                 <a href="#" className="flex  items-center gap-[0.5rem]">
                   <img src="/svg/clock.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap ">
-                    cal saat
+                    {t("navbar-days") + ": "}
                     <span className="text-[1em] font-bold text-primary-bright">
-                      {` 9:00-18:00`}
+                      {t("navbar-hours")}
                     </span>
                   </span>
                 </a>
                 <a href="#" className="flex  items-center gap-[0.5rem]">
                   <img src="/svg/phone-alt.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap underline">
-                    0541880 50 50
+                    {t("navbar-phone")}
                   </span>
                 </a>
                 <a href="#" className="flex  items-center gap-[0.5rem]">
                   <img src="/svg/location.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap ">
-                    asd
+                    {t("navbar-address")}
                   </span>
                 </a>
               </div>
@@ -120,7 +99,8 @@ export default function Navbar() {
                       <Link
                         href={item.route}
                         className={`${
-                          item.route === `/${activeRoute}`
+                          item.route === activeRoute ||
+                          (item.route === "/" && !activeRoute)
                             ? "text-primary-bright "
                             : ""
                         } ${
@@ -129,7 +109,7 @@ export default function Navbar() {
                             : ""
                         } font-bold text-[1.rem]`}
                       >
-                        {item.name}
+                        {t(`navbar-${item.name}`)}
                       </Link>
                     ) : (
                       <span className="font-bold" onClick={item.onClick}>
