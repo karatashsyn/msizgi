@@ -355,3 +355,9 @@ h2 span {
     opacity: 0.2;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .greenGradient {
+    background: linear-gradient(180deg, #009944 0%, #ffffff 40%);
+  }
+}

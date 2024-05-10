@@ -18,7 +18,12 @@ const WorkingHoursInfo = ({ day, info }) => {
 
 const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
   return (
-    <div className={className + " flex flex-col gap-[0.5rem] relative"}>
+    <div
+      style={{
+        background: "yellow",
+      }}
+      className={className + " flex flex-col gap-[0.5rem] relative"}
+    >
       <img
         src={image}
         className="absolute inset-0 w-full h-full object-cover "
@@ -45,11 +50,7 @@ const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["about", "common"]);
   return (
-    <div
-      style={{
-        background: "linear-gradient(180deg, #009944 0%, #FFFFFF 40%)",
-      }}
-    >
+    <div className="greenGradient">
       <PaddedContainer className={"overflow-hidden"}>
         <h1 className="max-sm:text-[3.75rem] text-[6.4rem] max-sm:text-[#FFFFFF]  font-semibold">
           {t("about:aboutUs")}
