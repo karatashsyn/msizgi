@@ -1,10 +1,12 @@
+import initTranslations from "@/app/i18n";
 import AppointmentButton from "@/components/buttons/AppointmentButton";
 import BlogCard from "@/components/cards/BlogCard";
 import BlogCardSecondary from "@/components/cards/BlogCardSecondary";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
 
-export default function Contact() {
+export default async function Blog({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["blog", "common"]);
   return (
     <>
       <div className="animate-fade-in-up relative">
@@ -22,7 +24,7 @@ export default function Contact() {
                 }}
                 className="font-semibold text-[6.4rem] text-[#1B262C]"
               >
-                Blog.
+                {t("blog:blog")}
               </h1>
 
               <p
@@ -31,11 +33,11 @@ export default function Contact() {
                 }}
                 className="text-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
                 dangerouslySetInnerHTML={{
-                  __html:
-                    "Bloglarımızı takip ederek aradığın sorunun cevabına bir adım <br/> daha yaklaş! Seni aramızda görmek için sabırsızlanıyoruz.",
+                  __html: t("blog:mainParagraph"),
                 }}
               ></p>
               <AppointmentButton
+                text={t("common:button-takeAppointment")}
                 className={"!bg-[#009944] mt-[2.6rem] font-bold"}
               />
             </div>
@@ -109,7 +111,7 @@ export default function Contact() {
           </div>
           <div className=" basis-[50%]">
             <h3 className="text-[1.2rem] font-bold mb-[1.5rem] text-[#85D6FB]">
-              Diğer Bloglar
+              {t("blog:otherBlogs")}
             </h3>
             <div className="grid grid-cols-2 gap-[0.45rem]">
               <BlogCardSecondary

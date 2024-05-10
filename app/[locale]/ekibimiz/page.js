@@ -1,9 +1,11 @@
+import initTranslations from "@/app/i18n";
 import AppointmentButton from "@/components/buttons/AppointmentButton";
 import EmployeeCard from "@/components/cards/EmployeeCard";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
 
-export default function Contact() {
+export default async function Contact({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["team", "common"]);
   return (
     <div className="animate-fade-in-up relative">
       <div className="relative ">
@@ -20,7 +22,7 @@ export default function Contact() {
               }}
               className="font-semibold text-[6.4rem] text-[#1B262C]"
             >
-              Ekibimiz
+              {t("team:team")}
             </h1>
 
             <p
@@ -29,63 +31,71 @@ export default function Contact() {
               }}
               className="text-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
               dangerouslySetInnerHTML={{
-                __html:
-                  "Profesyonel Ekibimizle Gülüşünüzü Keşfetmenizde yardımcı <br/> olmakla kalmıyor, bütün tedavi sürecinde yanınızda oluyoruz. İşte <br/> Gülüşünüzün kahramanları.",
+                __html: t("team:mainParagraph"),
               }}
             ></p>
             <AppointmentButton
-              className={"!bg-[#F08F8C] mt-[2.6rem] font-bold gap-[5rem]"}
+              text={t("common:button-takeAppointment")}
+              className={"!bg-[#F08F8C] mt-[2.6rem] font-bold"}
             />
           </div>
           <section
-            className="mt-[21.5rem] grid grid-cols-4"
+            className="mt-[21.5rem] mb-[7.9rem] grid grid-cols-4"
             style={{
               rowGap: "5rem",
             }}
           >
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
               position="Diş Hekimi"

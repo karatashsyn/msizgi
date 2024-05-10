@@ -23,20 +23,20 @@ export default function Footer() {
   const { t } = useTranslation("common");
   const href = "#";
   return (
-    <footer className="w-full mb-[4rem] bg-[#F2F7FF] ">
+    <footer className="w-full mb-[4rem] sm:bg-[#F2F7FF] ">
       <PaddedContainer
         containerClassName="!overflow-visible"
         className={
           "flex max-sm:flex-col justify-center max-lg:gap-[3rem] gap-[6rem] "
         }
       >
-        <div className="sm:pb-[5.65rem]">
+        <div className="sm:pb-[5.65rem] max-sm:w-full max-sm:mx-auto">
           {/* Footer Cart */}
           <div
             style={{
               boxShadow: "0px 0px 25px 0px rgba(0, 40, 255, 0.15)",
             }}
-            className="p-[3rem] bg-white w-[24rem] h-[26rem] rounded-tr-[2.5rem] rounded-bl-[2.5rem]"
+            className="p-[3rem] bg-white sm:w-[24rem] max-sm:w-full h-[26rem] rounded-tr-[2.5rem] rounded-bl-[2.5rem]"
           >
             <Image
               unoptimized={true}
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="sm:min-h-full flex items-center">
+        <div className="sm:min-h-full flex items-center max-sm:hidden">
           <div>
             <p
               className="text-[#52575D] mb-[1.5rem] leading-[1.3]  max-w-[28rem]"

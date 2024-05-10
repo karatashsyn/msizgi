@@ -5,6 +5,9 @@ import PaddedContainer from "@/components/composite/PaddedContainer";
 import ServiceCard from "@/components/cards/ServiceCard";
 import EmployeeCard from "@/components/cards/EmployeeCard";
 import InfoBox from "@/components/InfoBox";
+import ServiceCardMobile from "@/components/cards/ServiceCardMobile";
+import BlogCard from "@/components/cards/BlogCard";
+import BlogCardMobile from "@/components/cards/BlogCardMobile";
 
 export const metaData = {
   title: "MSI Diş Kliniği",
@@ -12,11 +15,11 @@ export const metaData = {
 };
 
 export default async function Home({ params: { locale } }) {
-  const { t } = await initTranslations(locale, ["home"]);
+  const { t } = await initTranslations(locale, ["home", "services"]);
   return (
-    <main className="animate-fade-in-up relative">
+    <main className="animate-fade-in-up relative ">
       <div
-        className="absolute top-0 left-0 h-[100%] right-0 z-[]"
+        className="absolute max-sm:hidden top-0 left-0 h-[100%] right-0 z-[]"
         style={{
           background:
             "linear-gradient(180deg, #85D6FB 0%, rgba(255,255,255,0) 150vh)",
@@ -24,19 +27,15 @@ export default async function Home({ params: { locale } }) {
         }}
       ></div>
       <div className="relative ">
-        <PaddedContainer
-          containerClassName={
-            "bg-[rgba(248,248,248,0.21)] relative pb-[7.3rem]"
-          }
-        >
-          <section id="hero-section">
-            <img
-              className="absolute top-[5rem] right-0 z-[2] h-[22rem]"
-              src={"/svg/owl.svg"}
-              alt="MSI Diş Kliniği Logo"
-            />
+        <section id="hero-section" className="max-sm:bg-[#85D6FB]">
+          <PaddedContainer
+            className={"!pr-0 max-w-none"}
+            containerClassName={
+              "sm:bg-[rgba(248,248,248,0.21)] relative pb-[7.3rem]"
+            }
+          >
             <svg
-              className="absolute top-0 left-0 right-0 -translate-y-36 w-[100vw]"
+              className="max-sm:hidden absolute top-0 left-0 right-0 -translate-y-36 w-[100vw] max-h-full"
               width="1920"
               height="853"
               viewBox="0 0 1920 853"
@@ -77,66 +76,94 @@ export default async function Home({ params: { locale } }) {
               </defs>
             </svg>
 
-            <div className="mt-[5rem] relative">
-              <h1
-                style={{
-                  fontSize: "6.4rem",
-                  fontWeight: "bold",
-                  lineHeight: "1",
-                  color: "white",
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: t("hero-title"),
-                }}
-              ></h1>
-              <p
-                className="mt-[2.7rem]"
-                style={{
-                  fontSize: "1.2rem",
-                  width: "60%",
-                  color: "white",
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: t("hero-text"),
-                }}
-              ></p>
+            <div className="mt-[5rem]  flex justify-between relative">
+              <div className="flex flex-col">
+                <h1
+                  className="text-[2.34rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.8rem] xl:text-[6.4rem]"
+                  style={{
+                    fontWeight: "bold",
+                    lineHeight: "1",
+                    color: "white",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("hero-title"),
+                  }}
+                ></h1>
+                <p
+                  className="max-sm:hidden sm:mt-[2.7rem] sm:w-[60%] text-[1.2rem]"
+                  style={{
+                    color: "white",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("hero-text"),
+                  }}
+                ></p>
+                <p
+                  className="sm:hidden mt-[0.7rem] sm:w-[60%] text-[1.4rem]"
+                  style={{
+                    color: "white",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("hero-text-mobile"),
+                  }}
+                ></p>
+              </div>
+
+              <img
+                className="z-[2] h-[9rem] sm:h-[12rem] md:h-[16rem] lg:h-[20rem] xl:h-[22rem]"
+                src={"/svg/owl.svg"}
+                alt="MSI Diş Kliniği Logo"
+              />
+            </div>
+            <div className="max-sm:pr-6">
               <AppointmentButton
-                className={"!mt-[4.3rem] bg-[#F08F8C]"}
+                className={
+                  "!mt-[4.3rem] max-sm:text-[1.4rem] max-sm:font-bold bg-[#F08F8C] max-sm:w-full max-sm:h-[4.84rem]"
+                }
                 text={t("hero-takeAppointment")}
               />
-              <div className="mt-[3.9rem] flex  items-center gap-[1rem]">
-                <div className="px-[1.8rem] pt-[2rem] lg:rounded-tl-[30px] h-[8.3rem] w-[14rem] lg:rounded-br-[30px] bg-white">
-                  <h3 className="mb-[1.2rem] leading-[0] font-semibold text-[1.2rem]">
-                    {t("hero-ourAddress")}
-                  </h3>
-                  <span className="text-[0.85rem] leading-[0] text-[#52575D]">
-                    {t("hero-ourAddressInfo")}
-                  </span>
-                </div>
-                <div className="px-[1.8rem] pt-[2rem] lg:rounded-tl-[30px] h-[8.3rem] w-[14rem] lg:rounded-br-[30px] bg-white">
-                  <div className="mb-[1.2rem] ">
-                    <h3 className="leading-[0] font-semibold text-[1.2rem]">
-                      {t("hero-workingHours")}
+            </div>
+            <div className="max-sm:flex max-sm:justify-center max-sm:w-full max-sm:pr-6">
+              <div
+                className="mt-[3.9rem] max-sm:rounded-br-[2.5rem] max-sm:rounded-tl-[2.5rem] max-sm:overflow-hidden flex max-sm:items-center max-sm:w-full  
+            items-center gap-[1rem] max-sm:max-h-[8rem] max-sm:bg-white max-sm:justify-between max-sm:px-[1.95rem]"
+              >
+                <div className="px-[1.8rem] max-sm:basis-full  pt-[2rem] max-sm:p-0 rounded-tl-[30px] h-[8.3rem] sm:w-[14rem] rounded-br-[30px] bg-white max-sm:items-center max-sm:flex">
+                  <div>
+                    <h3 className="mb-[1.2rem] max-sm:text-[1.09rem] leading-[0] font-semibold text-[1.2rem]">
+                      {t("hero-ourAddress")}
                     </h3>
+                    <span className="text-[0.85rem] max-sm:text-[1.09rem] leading-[0] text-[#52575D]">
+                      {t("hero-ourAddressInfo")}
+                    </span>
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <span className="text-[0.85rem]   text-[#52575D]">
-                      {t("hero-daysInfo")}
-                    </span>
-
-                    <span className="text-[0.85rem] leading-[0] text-[#52575D]">
-                      {t("hero-hoursInfo")}
-                    </span>
+                </div>
+                <div className="h-[6.32rem] sm:hidden my-auto w-[0.1rem] bg-[#D9D9D9]"></div>
+                <div className="px-[1.8rem] max-sm:basis-full  pt-[2rem] max-sm:p-0 rounded-tl-[30px] h-[8.3rem] sm:w-[14rem] rounded-br-[30px] bg-white max-sm:items-center max-sm:flex">
+                  <div>
+                    <div className="mb-[1.2rem] ">
+                      <h3 className="leading-[0] max-sm:text-[1.09rem] max-sm:whitespace-nowrap font-semibold text-[1.2rem]">
+                        {t("hero-workingHours")}
+                      </h3>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <span className="text-[0.85rem] max-sm:text-[1.09rem]  text-[#52575D]">
+                        {t("hero-daysInfo")}
+                      </span>
+                      <span className="text-[0.85rem] max-sm:text-[1.09rem] leading-[0] text-[#52575D]">
+                        {t("hero-hoursInfo")}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </PaddedContainer>
-        <PaddedContainer containerClassName={""}>
+          </PaddedContainer>
+        </section>
+        <PaddedContainer className={"!px-0"}>
           <section id="second-section">
-            <div className="w-full flex space-between items-center gap-[4.65rem] pt-[7.5rem] pb-[5.65rem]">
-              <div className="mt-[5rem] basis-[32%]">
+            <div className="w-full sm:flex sm:space-between items-center gap-[4.65rem] sm:pt-[7.5rem] max-sm:pb-[2.34rem] sm:pb-[5.65rem]">
+              <div className="mt-[5rem] pl-12 lg:basis-[32%] basis-[44%] max-sm:hidden">
                 <h2
                   className="font-bold"
                   style={{
@@ -159,27 +186,50 @@ export default async function Home({ params: { locale } }) {
                   }}
                 ></p>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center max-sm:min-w-full max-sm:max-h-[26rem]  max-sm:overflow-hidden">
                 <img
                   style={{
                     boxShadow: "0px 0px 20px 0px rgba(0, 40, 255, 0.15)",
                   }}
                   src="/images/second-teeth.png"
-                  className="w-[27rem] h-[41.9rem]"
+                  className="max-sm:basis-[68%] object-cover object-center max-sm:h-full w-[18rem] h-[28rem] lg:w-[27rem] lg:h-[41.9rem] max-sm:shadow-none"
                   alt=""
                 />
                 <img
                   src="/images/second-instrument.png"
-                  className="w-[13.5rem] max-h-[32rem]"
+                  className="max-sm:basis-[32%] object-cover object-center max-sm:min-h-[26rem] w-[9rem] max-h-[22.6rem] lg:w-[13.5rem] lg:max-h-[32rem]"
                   alt=""
                 />
               </div>
             </div>
+            <PaddedContainer className={"mb-[4.14rem]"}>
+              <div className="sm:mt-[5rem] sm:hidden ">
+                <h2
+                  className="font-bold text-[2.31rem]"
+                  style={{
+                    lineHeight: "1",
+                    color: "#1B262C",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("second-main"),
+                  }}
+                ></h2>
+                <p
+                  className="mt-[1.87rem] text-[1.56rem] max-sm:border-b-[1px] max-sm:border-b-[#52575D] max-sm:pb-[2rem]"
+                  style={{
+                    color: "#52575D",
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("second-secondary"),
+                  }}
+                ></p>
+              </div>
+            </PaddedContainer>
           </section>
         </PaddedContainer>
         <section
           id="third-section"
-          className="w-screen mb-[3.45rem]"
+          className="w-screen mb-[3.45rem] max-sm:hidden"
           style={{
             backgroundImage: "url('/images/third-bg.jpg')",
             backgroundPosition: "top",
@@ -188,7 +238,7 @@ export default async function Home({ params: { locale } }) {
           }}
         >
           <PaddedContainer containerClassName={"!overflow-visible"}>
-            <div className="w-full flex space-between items-center gap-[4.65rem] pt-[6rem]">
+            <div className="w-full flex space-between items-center gap-[4.65rem] pt-[6rem] ">
               <div>
                 <h2
                   style={{
@@ -243,8 +293,10 @@ export default async function Home({ params: { locale } }) {
             </div>
           </PaddedContainer>
         </section>
-        <PaddedContainer containerClassName={"pt-[7.9rem] pb-12"}>
-          <section id="fourth-section">
+        <section id="fourth-section ">
+          <PaddedContainer
+            containerClassName={"pt-[7.9rem] pb-12 max-sm:hidden"}
+          >
             <div className="flex gap-[2.8rem] items-center">
               <div className="max-w-min pb-[2rem]">
                 <h2 className="text-[#1B262C] font-extrabold text-[3rem] mb-[1.05rem]">
@@ -255,95 +307,150 @@ export default async function Home({ params: { locale } }) {
                 </p>
                 <ServiceCard
                   color="#EF8689"
-                  title={t("fourth-service1")}
+                  title={t("services:serviceTitle1")}
                   image={"/images/s1-min.png"}
-                  description={t("fourth-description1")}
+                  description={t("services:serviceDescription1")}
                 />
               </div>
+
               <div className="flex gap-[2.5rem]">
                 <div className="flex flex-col gap-[2.8rem]">
                   <ServiceCard
                     color="#FFEF89"
-                    title={t("fourth-service2")}
+                    title={t("services:serviceTitle2")}
                     image={"/images/s1-min.png"}
-                    description={t("fourth-description2")}
+                    description={t("services:serviceDescription2")}
                   />
                   <ServiceCard
                     color="#85D6FB"
-                    title={t("fourth-service3")}
+                    title={t("services:serviceTitle3")}
                     image={"/images/s1-min.png"}
-                    description={t("fourth-description3")}
+                    description={t("services:serviceDescription3")}
                   />
                 </div>
                 <div className="flex flex-col translate-y-4 gap-[2.8rem]">
                   <ServiceCard
                     color="#85D6FB"
-                    title={t("fourth-service4")}
+                    title={t("services:serviceTitle4")}
                     image={"/images/s1-min.png"}
-                    description={t("fourth-description4")}
+                    description={t("services:serviceDescription4")}
                   />
                   <ServiceCard
                     color="#FFEF89"
-                    title={t("fourth-service5")}
+                    title={t("services:serviceTitle5")}
                     image={"/images/s1-min.png"}
-                    description={t("fourth-description5")}
+                    description={t("services:serviceDescription5")}
                   />
                 </div>
               </div>
             </div>
-          </section>
-        </PaddedContainer>
-        <PaddedContainer>
-          <section id="fifth-section">
-            <div className="w-full">
-              <div>
-                <h3
-                  style={{
-                    lineHeight: "3.2rem",
-                  }}
-                  className="font-extrabold text-[3rem] text-[#1B262C]"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      "Profesyonel <br style='line-height:0;'/> <span class='font-extrabold leading-0' style='color:#009944; font-size:inherit;font-weight: inherit; line-height:0;'>Ekibimiz</span>",
-                  }}
-                ></h3>
-              </div>
-              <div className="overflow-x-scroll flex gap-[1.5rem] mt-[2rem]">
-                <EmployeeCard
-                  image="/images/tmp1.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  image="/images/tm2.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  image="/images/tmp3.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  image="/images/tmp4.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  image="/images/tmp4.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-              </div>
+          </PaddedContainer>
+          <div>
+            <PaddedContainer>
+              <h2 className="text-[#1B262C] font-extrabold text-[2.031rem] mb-[0.64rem]">
+                {t("fourth-primary")}
+              </h2>
+              <p className="text-[1.32rem] font-semibold text-[#52575D] mb-[2.34rem]">
+                {t("fourth-secondary")}
+              </p>
+            </PaddedContainer>
+
+            <div className="flex gap-[2.18rem] sm:hidden overflow-x-scroll pb-[1.875rem]">
+              <ServiceCardMobile
+                className="ml-6"
+                color="#EF8689"
+                title={t("services:serviceTitle1")}
+                image={"/images/s1-min.png"}
+                description={t("services:serviceDescription1")}
+              />
+              <ServiceCardMobile
+                color="#EF8689"
+                title={t("services:serviceTitle2")}
+                image={"/images/s2-min.png"}
+                description={t("services:serviceDescription2")}
+              />
+              <ServiceCardMobile
+                color="#EF8689"
+                title={t("services:serviceTitle3")}
+                image={"/images/s3-min.png"}
+                description={t("services:serviceDescription3")}
+              />
+              <ServiceCardMobile
+                color="#EF8689"
+                title={t("services:serviceTitle4")}
+                image={"/images/s4-min.png"}
+                description={t("services:serviceDescription4")}
+                className="mr-6"
+              />
             </div>
-          </section>
-        </PaddedContainer>
-        <section id="sixth-section " className="mt-[20rem] mb-[6rem]">
+          </div>
+        </section>
+        <section id="fifth-section">
+          <div className="w-full">
+            <PaddedContainer>
+              <h3
+                style={{
+                  lineHeight: "3.2rem",
+                }}
+                className="max-sm:hidden font-extrabold text-[3rem] text-[#1B262C]"
+                dangerouslySetInnerHTML={{
+                  __html: t("fifth-primary"),
+                }}
+              ></h3>
+              <h3
+                style={{
+                  lineHeight: "3.2rem",
+                }}
+                className="sm:hidden font-bold text-[2.5rem] text-[#1B262C]"
+                dangerouslySetInnerHTML={{
+                  __html: t("fifth-primary-mobile"),
+                }}
+              ></h3>
+            </PaddedContainer>
+            <div className="overflow-x-scroll flex gap-[1.5rem] mt-[2rem] max-sm:mb-[4rem] max-sm:pb-[2.32rem]">
+              <EmployeeCard
+                className={"max-sm:ml-6"}
+                yearWord={t("fifth-year")}
+                image="/images/tmp1.png"
+                name="John Doe"
+                position="Ortodonti Uzmanı"
+                experience={10}
+              />
+              <EmployeeCard
+                image="/images/tm2.png"
+                yearWord={t("fifth-year")}
+                name="John Doe"
+                position="Ortodonti Uzmanı"
+                experience={10}
+              />
+              <EmployeeCard
+                image="/images/tmp3.png"
+                yearWord={t("fifth-year")}
+                name="John Doe"
+                position="Ortodonti Uzmanı"
+                experience={10}
+              />
+              <EmployeeCard
+                image="/images/tmp4.png"
+                yearWord={t("fifth-year")}
+                name="John Doe"
+                position="Ortodonti Uzmanı"
+                experience={10}
+              />
+              <EmployeeCard
+                image="/images/tmp4.png"
+                yearWord={t("fifth-year")}
+                name="John Doe"
+                position="Ortodonti Uzmanı"
+                experience={10}
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          id="sixth-section "
+          className="mt-[20rem] mb-[6rem] max-sm:hidden "
+        >
           <div className="w-full relative">
             <PaddedContainer className={"absolute top-[-38%]"}>
               <div className="w-full">
@@ -393,6 +500,22 @@ export default async function Home({ params: { locale } }) {
           </div>
         </section>
       </div>
+      <section className="mt-[2.1rem] sm:hidden">
+        <PaddedContainer>
+          <h2 className="text-[#1B262C] font-bold text-[2.5rem] mb-[1.40rem]">
+            {t("blog")}
+          </h2>
+          <div className="flex overflow-x-scroll pb-[2rem]">
+            <BlogCardMobile
+              date={"12.12.2021"}
+              description={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
+              }
+              title={"Lorem ipsum dolor sit amet"}
+            />
+          </div>
+        </PaddedContainer>
+      </section>
     </main>
   );
 }
