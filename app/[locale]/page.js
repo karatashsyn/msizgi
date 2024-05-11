@@ -346,8 +346,8 @@ export default async function Home({ params: { locale } }) {
             </div>
           </PaddedContainer>
           <div>
-            <PaddedContainer>
-              <h2 className="text-[#1B262C] font-extrabold text-[2.031rem] mb-[0.64rem]">
+            <PaddedContainer className={"sm:hidden"}>
+              <h2 className=" text-[#1B262C] font-extrabold text-[2.031rem] mb-[0.64rem]">
                 {t("fourth-primary")}
               </h2>
               <p className="text-[1.32rem] font-semibold text-[#52575D] mb-[2.34rem]">
@@ -386,7 +386,7 @@ export default async function Home({ params: { locale } }) {
           </div>
         </section>
         <section id="fifth-section">
-          <div className="w-full">
+          <div className="w-full max-sm:mt-8">
             <PaddedContainer>
               <h3
                 style={{
@@ -401,50 +401,52 @@ export default async function Home({ params: { locale } }) {
                 style={{
                   lineHeight: "3.2rem",
                 }}
-                className="sm:hidden font-bold text-[2.5rem] text-[#1B262C]"
+                className="sm:hidden font-bold text-[2.3rem] text-[#1B262C]"
                 dangerouslySetInnerHTML={{
                   __html: t("fifth-primary-mobile"),
                 }}
               ></h3>
             </PaddedContainer>
-            <div className="overflow-x-scroll flex gap-[1.5rem] mt-[2rem] max-sm:mb-[4rem] max-sm:pb-[2.32rem]">
-              <EmployeeCard
-                className={"max-sm:ml-6"}
-                yearWord={t("fifth-year")}
-                image="/images/tmp1.png"
-                name="John Doe"
-                position="Ortodonti Uzmanı"
-                experience={10}
-              />
-              <EmployeeCard
-                image="/images/tm2.png"
-                yearWord={t("fifth-year")}
-                name="John Doe"
-                position="Ortodonti Uzmanı"
-                experience={10}
-              />
-              <EmployeeCard
-                image="/images/tmp3.png"
-                yearWord={t("fifth-year")}
-                name="John Doe"
-                position="Ortodonti Uzmanı"
-                experience={10}
-              />
-              <EmployeeCard
-                image="/images/tmp4.png"
-                yearWord={t("fifth-year")}
-                name="John Doe"
-                position="Ortodonti Uzmanı"
-                experience={10}
-              />
-              <EmployeeCard
-                image="/images/tmp4.png"
-                yearWord={t("fifth-year")}
-                name="John Doe"
-                position="Ortodonti Uzmanı"
-                experience={10}
-              />
-            </div>
+            <PaddedContainer className="max-sm:overflow-x-scroll max-sm:px-0">
+              <div className=" flex gap-[1.5rem] mt-[2rem] max-sm:mb-[2.3rem] max-sm:pb-[0.2rem]">
+                <EmployeeCard
+                  // className={"max-sm:ml-6"}
+                  yearWord={t("fifth-year")}
+                  image="/images/tmp1.png"
+                  name="John Doe"
+                  position="Ortodonti Uzmanı"
+                  experience={10}
+                />
+                <EmployeeCard
+                  image="/images/tm2.png"
+                  yearWord={t("fifth-year")}
+                  name="John Doe"
+                  position="Ortodonti Uzmanı"
+                  experience={10}
+                />
+                <EmployeeCard
+                  image="/images/tmp3.png"
+                  yearWord={t("fifth-year")}
+                  name="John Doe"
+                  position="Ortodonti Uzmanı"
+                  experience={10}
+                />
+                <EmployeeCard
+                  image="/images/tmp4.png"
+                  yearWord={t("fifth-year")}
+                  name="John Doe"
+                  position="Ortodonti Uzmanı"
+                  experience={10}
+                />
+                <EmployeeCard
+                  image="/images/tmp4.png"
+                  yearWord={t("fifth-year")}
+                  name="John Doe"
+                  position="Ortodonti Uzmanı"
+                  experience={10}
+                />
+              </div>
+            </PaddedContainer>
           </div>
         </section>
         <section
@@ -500,7 +502,7 @@ export default async function Home({ params: { locale } }) {
           </div>
         </section>
       </div>
-      <section className="mt-[2.1rem] sm:hidden">
+      <section className="sm:hidden mb-8">
         <PaddedContainer>
           <h2 className="text-[#1B262C] font-bold text-[2.5rem] mb-[1.40rem]">
             {t("blog")}

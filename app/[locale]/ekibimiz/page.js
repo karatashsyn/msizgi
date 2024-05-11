@@ -7,7 +7,7 @@ import PageGradient from "@/components/PageGradient";
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["team", "common"]);
   return (
-    <div className="animate-fade-in-up relative">
+    <div className="w-full animate-fade-in-up relative">
       <div className="relative ">
         <PageGradient
           rectangleColor="#F2F7FF"
@@ -40,12 +40,13 @@ export default async function Contact({ params: { locale } }) {
             />
           </div>
           <section
-            className="mt-[21.5rem] mb-[7.9rem] grid grid-cols-4"
+            className="mt-[12.5rem] mb-[7.9rem] grid max-sm:grid-cols-2 grid-cols-4 max-lg:grid-cols-3 gap-[2rem]"
             style={{
               rowGap: "5rem",
             }}
           >
             <EmployeeCard
+              className={"max-w-[12.9rem] w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -53,6 +54,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -60,6 +62,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -67,6 +70,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -74,6 +78,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -81,6 +86,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -88,6 +94,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}
@@ -95,6 +102,7 @@ export default async function Contact({ params: { locale } }) {
               image="/images/tmp1.png"
             />
             <EmployeeCard
+              className={"w-[12.9rem] max-w-full min-w-0"}
               yearWord={t("common:year")}
               name="Dr. Cemil Kaya"
               experience={5}

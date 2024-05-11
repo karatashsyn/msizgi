@@ -10,10 +10,10 @@ export default function EmployeeCard({
   className,
 }) {
   return (
-    <div className={`${className} min-w-[12.9rem]`}>
+    <div className={`${className}  max-w-[12.9rem] overflow-hidden`}>
       <img
         src={image}
-        className="w-full object-center object-cover h-[14.3rem] rounded-tl-[1rem] rounded-br-[1rem]"
+        className="max-w-full object-center object-cover  aspect-[9/10] rounded-tl-[1rem] rounded-br-[1rem]"
         alt="Employee"
       />
       <div className="mt-[1.15rem] text-center">

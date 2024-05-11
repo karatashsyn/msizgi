@@ -45,7 +45,7 @@ export default async function Contact({ params: { locale } }) {
                 rowGap: "1.1rem",
                 columnGap: "1.1rem",
               }}
-              className="grid grid-cols-3 gap-[1.1rem] mt-[6.4rem]"
+              className="grid grid-cols-3 max-md:grid-cols-2 gap-[1.1rem] mt-[6.4rem]"
             >
               <ServiceCard
                 color="#EF8689"
