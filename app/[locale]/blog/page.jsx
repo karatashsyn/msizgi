@@ -12,6 +12,7 @@ export default async function Blog({ params: { locale } }) {
       <div className="animate-fade-in-up relative">
         <div className="relative ">
           <PageGradient
+            className={"max-sm:opacity-25"}
             rectangleColor="#009944"
             firstCircleColor="#009944"
             secondCircleColor="#009944"
@@ -22,7 +23,7 @@ export default async function Blog({ params: { locale } }) {
                 style={{
                   lineHeight: "1",
                 }}
-                className="font-semibold text-[6.4rem] text-[#1B262C]"
+                className="font-semibold max-sm:text-[3rem]  text-[6.4rem] text-[#1B262C]"
               >
                 {t("blog:blog")}
               </h1>
@@ -31,7 +32,7 @@ export default async function Blog({ params: { locale } }) {
                 style={{
                   lineHeight: "1",
                 }}
-                className="text-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
+                className="text-[1.2rem] max-sm:mt-[1.2rem] mt-[2.4rem]  text-[#52575D] font-semibold"
                 dangerouslySetInnerHTML={{
                   __html: t("blog:mainParagraph"),
                 }}
@@ -44,10 +45,10 @@ export default async function Blog({ params: { locale } }) {
           </PaddedContainer>
         </div>
       </div>
-      <section className="mt-[9.75rem] mb-[5rem]">
-        <div className="w-full flex px-24 gap-[3rem] justify-center items-start">
+      <section className="mt-[9.75rem] max-sm:mt-[3rem] mb-[5rem]">
+        <div className="w-full flex max-sm:px-6 max-lg:px-9 max-xl:px-16 px-24 gap-[3rem] max-sm:grid-cols-2 justify-center items-start">
           <div
-            className="grid grid-cols-2 gap-[1rem] "
+            className="grid grid-cols-3 max-sm:grid-cols-2 max-lg:grid-cols-2 gap-[1rem] max-md:grid-cols-3 basis-[0.64] max-md:basis-[1]"
             style={{
               rowGap: "2rem",
             }}
@@ -109,11 +110,11 @@ export default async function Blog({ params: { locale } }) {
               dalıdır."
             />
           </div>
-          <div className=" basis-[50%]">
+          <div className=" basis-[36%] max-md:hidden">
             <h3 className="text-[1.2rem] font-bold mb-[1.5rem] text-[#85D6FB]">
               {t("blog:otherBlogs")}
             </h3>
-            <div className="grid grid-cols-2 gap-[0.45rem]">
+            <div className="grid grid-cols-1 gap-[0.45rem]">
               <BlogCardSecondary
                 className={"max-w-none"}
                 date="15 Nisan 2024"

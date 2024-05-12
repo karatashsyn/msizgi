@@ -10,6 +10,7 @@ export default async function Contact({ params: { locale } }) {
     <div className="animate-fade-in-up relative overflow-hidden">
       <div className="relative ">
         <PageGradient
+          className={"max-sm:opacity-25"}
           rectangleColor="#F08F8C"
           firstCircleColor="#F08F8C"
           secondCircleColor="#F08F8C"
@@ -20,7 +21,7 @@ export default async function Contact({ params: { locale } }) {
               style={{
                 lineHeight: "1",
               }}
-              className="font-semibold text-[6.4rem] text-[#1B262C]"
+              className="font-semibold max-sm:text-[3rem] text-[6.4rem] text-[#1B262C]"
             >
               {t("contact:contactUs") + "."}
             </h1>
@@ -29,7 +30,7 @@ export default async function Contact({ params: { locale } }) {
               style={{
                 lineHeight: "1",
               }}
-              className="text-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
+              className="text-[1.2rem] max-sm:mt-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
               dangerouslySetInnerHTML={{
                 __html: t("contact:mainParagraph"),
               }}
@@ -51,9 +52,9 @@ export default async function Contact({ params: { locale } }) {
                 className="max-w-full max-h-[27.5rem] mt-[2.9rem] mb-[4.3rem]"
               />
             </a>
-            <div className="flex justify-between mb-12">
+            <div className="flex justify-between mb-12 max-lg:flex-col md:gap-[3rem]">
               <iframe
-                className="max-w-[40.5rem] h-[48rem]"
+                className="max-lg:w-full lg:max-w-[40.5rem] h-[48rem]"
                 title="Klinik Adı Randevu"
                 name="online-appointment-iframe"
                 allow="fullscreen"
@@ -62,7 +63,7 @@ export default async function Contact({ params: { locale } }) {
                 width="100%"
                 height="100%"
               ></iframe>
-              <div className="text-[#1B262C] flex flex-col gap-[1rem]">
+              <div className="text-[#1B262C] flex flex-col gap-[1rem] max-lg:mt-[6rem]">
                 <div className="flex flex-col">
                   <span className="">{t("contact:workingHours")}</span>
                   <span className="font-bold">

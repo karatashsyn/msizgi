@@ -408,9 +408,9 @@ export default async function Home({ params: { locale } }) {
               ></h3>
             </PaddedContainer>
             <PaddedContainer className="max-sm:overflow-x-scroll max-sm:px-0">
-              <div className=" flex gap-[1.5rem] mt-[2rem] max-sm:mb-[2.3rem] max-sm:pb-[0.2rem]">
+              <div className=" flex gap-[1.5rem] mt-[2rem] max-sm:mb-[2.3rem] max-sm:pb-[0.2rem] sm:flex-wrap sm:justify-center">
                 <EmployeeCard
-                  // className={"max-sm:ml-6"}
+                  className={"min-w-[10rem]"}
                   yearWord={t("fifth-year")}
                   image="/images/tmp1.png"
                   name="John Doe"
@@ -418,6 +418,7 @@ export default async function Home({ params: { locale } }) {
                   experience={10}
                 />
                 <EmployeeCard
+                  className={"min-w-[10rem]"}
                   image="/images/tm2.png"
                   yearWord={t("fifth-year")}
                   name="John Doe"
@@ -425,6 +426,7 @@ export default async function Home({ params: { locale } }) {
                   experience={10}
                 />
                 <EmployeeCard
+                  className={"min-w-[10rem]"}
                   image="/images/tmp3.png"
                   yearWord={t("fifth-year")}
                   name="John Doe"
@@ -432,6 +434,7 @@ export default async function Home({ params: { locale } }) {
                   experience={10}
                 />
                 <EmployeeCard
+                  className={"min-w-[10rem]"}
                   image="/images/tmp4.png"
                   yearWord={t("fifth-year")}
                   name="John Doe"
@@ -439,6 +442,7 @@ export default async function Home({ params: { locale } }) {
                   experience={10}
                 />
                 <EmployeeCard
+                  className={"min-w-[10rem]"}
                   image="/images/tmp4.png"
                   yearWord={t("fifth-year")}
                   name="John Doe"
@@ -468,7 +472,7 @@ export default async function Home({ params: { locale } }) {
                       {t("sixth-primary")}
                     </h2>
                   </div>
-                  <div className="flex justify-centr gap-[1rem]">
+                  <div className="flex max-lg:flex-col max-lg:gap-[3rem] justify-center lg:gap-[1rem]">
                     <InfoBox
                       number={1}
                       title={t("sixth-title1")}

@@ -10,6 +10,7 @@ export default async function Contact({ params: { locale } }) {
     <div className="animate-fade-in-up relative overflow-hidden">
       <div className="relative ">
         <PageGradient
+          className={"max-sm:opacity-25"}
           rectangleColor="#F2F7FF"
           firstCircleColor="#85D6FB"
           secondCircleColor="#85D6FB"
@@ -20,7 +21,7 @@ export default async function Contact({ params: { locale } }) {
               style={{
                 lineHeight: "1",
               }}
-              className="font-semibold text-[6.4rem] text-[#1B262C]"
+              className="font-semibold max-sm:text-[3rem]  text-[6.4rem] text-[#1B262C]"
             >
               {t("services:treatments")}
             </h1>
@@ -29,7 +30,7 @@ export default async function Contact({ params: { locale } }) {
               style={{
                 lineHeight: "1",
               }}
-              className="text-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
+              className="text-[1.2rem] max-sm:mt-[1.2rem] mt-[2.4rem] text-[#52575D] font-semibold"
               dangerouslySetInnerHTML={{
                 __html: t("services:mainParagraph"),
               }}

@@ -4,9 +4,10 @@ export default function PageGradient({
   rectangleColor = "#FF8989",
   firstCircleColor = "#FF8989",
   secondCircleColor = "#FF8989",
+  className,
 }) {
   return (
-    <div className="relative w-full -translate-y-[6.5rem] ">
+    <div className={`${className} relative w-full -translate-y-[6.5rem] `}>
       <div
         className="w-full absolute left-0 right-0 top-[6rem] h-[27rem]  opacity-[0.7] blur-[0.7rem]"
         style={{

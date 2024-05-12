@@ -9,9 +9,14 @@ import PageGradient from "@/components/PageGradient";
 
 const WorkingHoursInfo = ({ day, info }) => {
   return (
-    <div className="w-full flex items-center justify-between">
-      <span className="text-[0.85rem] text-[#F2F7FF] font-normal"> {day}</span>
-      <span className="text-[0.85rem] text-[#F2F7FF] font-bold">{info}</span>
+    <div className="w-full flex items-center justify-between gap-[4rem]">
+      <span className="text-[0.85rem] text-[#F2F7FF] font-normal whitespace-nowrap">
+        {" "}
+        {day}
+      </span>
+      <span className="text-[0.85rem] text-[#F2F7FF] font-bold whitespace-nowrap">
+        {info}
+      </span>
     </div>
   );
 };
@@ -90,32 +95,31 @@ export default async function Contact({ params: { locale } }) {
       <div className="relative h-[45rem] w-full flex mt-[5.3rem] max-sm:hidden">
         <img
           src="/images/about2.png"
-          className="absolute inset-0 h-full"
+          className="absolute object-cover inset-0 h-full"
           alt=""
         />
         <div className="mt-[4.65rem]">
-          <div className="relative z-[10] w-full px-[17.9rem]">
+          <div className="relative z-[10] w-full max-lg:pl-[9rem] px-[17.9rem]">
             <div
-              className="text-[rgb(255,242,242)] "
+              className="whitespace-nowrap text-[rgb(255,242,242)] "
               dangerouslySetInnerHTML={{
                 __html: t("about:yourSmileImportant"),
               }}
             ></div>
-
-            <div className="mt-[2.95rem] text-[1.2rem] text-white ">
-              {t("about:fourthParagraph")}
-            </div>
+          </div>
+          <div className="mt-[2.95rem] relative max-lg:px-[9rem] pl-[17.9rem] max-w-[80rem] text-[1.2rem] text-white ">
+            {t("about:fourthParagraph")}
           </div>
         </div>
       </div>
-      <div className="flex w-full px-[17.9rem] justify-end items-end translate-y-[-16.75rem]  mb-[-16.75rem] max-sm:hidden">
+      <div className="flex w-full max-lg:justify-center lg:px-[17.9rem] lg:justify-end items-end translate-y-[-16.75rem]  mb-[-16.75rem] max-sm:hidden">
         <img
           src="/images/about3.png"
-          className="w-[19rem] h-[20rem] translate-x-[3.9rem]"
+          className="max-w-[19rem] object-cover h-[20rem] translate-x-[3.9rem]"
           alt=""
         />
         <div className="max-w-[29rem] h-[30rem] px-[5.7rem] py-[3rem] bg-[#85D6FB]">
-          <h3 className="text-[2rem] font-extrabold text-white text-center">
+          <h3 className="text-[2rem] leading-[1.3] font-extrabold text-white text-center whitespace-nowrap">
             {t("about:workingHours")}
           </h3>
           <div className="mb-[1.5rem]">
