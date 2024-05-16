@@ -114,7 +114,7 @@ export default async function Contact({ params: { locale } }) {
       </div>
       <div className="flex w-full max-lg:justify-center lg:px-[17.9rem] lg:justify-end items-end translate-y-[-16.75rem]  mb-[-16.75rem] max-sm:hidden">
         <img
-          src="/images/about3.png"
+          src="/images/clinic4.webp"
           className="max-w-[19rem] object-cover h-[20rem] translate-x-[3.9rem]"
           alt=""
         />
@@ -178,25 +178,25 @@ export default async function Contact({ params: { locale } }) {
                   {t("about:clinicParagraph")}
                 </span>
                 <img
-                  className="sm:mt-[0.85rem] max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem] max-sm:h-full sm:min-w-[30rem] sm:h-[20.8rem]"
-                  src="/images/about4.png"
+                  className="sm:mt-[0.85rem] max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem] max-sm:h-full sm:min-w-[30rem] object-cover sm:h-[32.8rem]"
+                  src="/images/clinic2.webp"
                   alt=""
                 />
               </div>
               <img
-                src="/images/about4.png"
+                src="/images/clinic1.webp"
                 className="h-full max-sm:h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
                 alt=""
               />
             </div>
             <div className="w-full h-[23.1rem]  max-sm:gap-[1.17rem] flex gap-[2.2rem] max-sm:h-[12.8rem]">
               <img
-                src="/images/about4.png"
+                src="/images/clinic3.webp"
                 className="basis-full h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
                 alt=""
               />
               <img
-                src="/images/about4.png"
+                src="/images/clinic4.webp"
                 className="basis-full h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
                 alt=""
               />
