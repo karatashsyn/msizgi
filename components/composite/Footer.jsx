@@ -21,7 +21,6 @@ export default function Footer() {
     </div>
   );
   const { t } = useTranslation("common");
-  const href = "#";
   return (
     <footer className="w-full mb-[4rem] sm:bg-[#F2F7FF] ">
       <PaddedContainer
@@ -96,32 +95,32 @@ export default function Footer() {
 
             <div className="mt-[5.9rem] flex flex-col gap-[0.5rem]">
               <a
-                href={href}
+                href={"/iletisim"}
                 className="flex items-center gap-[0.2rem] text-primary-bright whitespace-nowrap  font-semibold  text-[0.85rem]"
               >
                 <img src="/svg/caret-right.svg" alt="#" />
                 {t("footer-createAppointment")}
               </a>
               <a
-                href={href}
+                href={"/tedaviler"}
                 className="font-semibold text-[#52575D] text-[0.85rem] whitespace-nowrap"
               >
                 {t("footer-services")}
               </a>
               <a
-                href={href}
+                href={"/ekibimiz"}
                 className="font-semibold text-[#52575D] text-[0.85rem] whitespace-nowrap"
               >
                 {t("footer-team")}
               </a>
               <a
-                href={href}
+                href={"/hakkimizda"}
                 className="font-semibold text-[#52575D] text-[0.85rem] whitespace-nowrap"
               >
                 {t("footer-aboutMSI")}
               </a>
               <a
-                href={href}
+                href={"/iletisim"}
                 className="font-semibold text-[#52575D] text-[0.85rem] whitespace-nowrap"
               >
                 {t("footer-contactUs")}

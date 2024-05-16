@@ -8,6 +8,7 @@ import InfoBox from "@/components/InfoBox";
 import ServiceCardMobile from "@/components/cards/ServiceCardMobile";
 import BlogCard from "@/components/cards/BlogCard";
 import BlogCardMobile from "@/components/cards/BlogCardMobile";
+import { team } from "@/data";
 
 export const metaData = {
   title: "MSI Diş Kliniği",
@@ -15,7 +16,7 @@ export const metaData = {
 };
 
 export default async function Home({ params: { locale } }) {
-  const { t } = await initTranslations(locale, ["home", "services"]);
+  const { t } = await initTranslations(locale, ["home", "services", "common"]);
   return (
     <main className="animate-fade-in-up relative ">
       <div
@@ -118,7 +119,7 @@ export default async function Home({ params: { locale } }) {
             <div className="max-sm:pr-6">
               <AppointmentButton
                 className={
-                  "!mt-[4.3rem] max-sm:text-[1.4rem] max-sm:font-bold bg-[#F08F8C] max-sm:w-full max-sm:h-[4.84rem]"
+                  "!mt-[4.3rem] relative max-sm:text-[1.4rem] max-sm:font-bold bg-[#F08F8C] max-sm:w-full max-sm:h-[4.84rem]"
                 }
                 text={t("hero-takeAppointment")}
               />
@@ -191,12 +192,12 @@ export default async function Home({ params: { locale } }) {
                   style={{
                     boxShadow: "0px 0px 20px 0px rgba(0, 40, 255, 0.15)",
                   }}
-                  src="/images/second-teeth.png"
+                  src="/images/second-teeth.webp"
                   className="max-sm:basis-[68%] object-cover object-center max-sm:h-full w-[18rem] h-[28rem] lg:w-[27rem] lg:h-[41.9rem] max-sm:shadow-none"
                   alt=""
                 />
                 <img
-                  src="/images/second-instrument.png"
+                  src="/images/second-instrument.webp"
                   className="max-sm:basis-[32%] object-cover object-center max-sm:min-h-[26rem] w-[9rem] max-h-[22.6rem] lg:w-[13.5rem] lg:max-h-[32rem]"
                   alt=""
                 />
@@ -215,7 +216,7 @@ export default async function Home({ params: { locale } }) {
                   }}
                 ></h2>
                 <p
-                  className="mt-[1.87rem] text-[1.56rem] max-sm:border-b-[1px] max-sm:border-b-[#52575D] max-sm:pb-[2rem]"
+                  className="mt-[1.87rem] text-[1.56rem] max-sm:border-b-[1px] max-sm:border-b-[#52575d53] max-sm:pb-[2rem]"
                   style={{
                     color: "#52575D",
                   }}
@@ -269,7 +270,7 @@ export default async function Home({ params: { locale } }) {
                   >
                     <img
                       className={`hover:scale-105 transition-all duration-300 w-full h-full`}
-                      src="/images/dental-prosthesis.png"
+                      src="/images/dental-prosthesis.webp"
                       alt=""
                     />
                     <div className="bg-primary rounded-full w-[2.5rem] h-[2.5rem] flex absolute left-[2rem] bottom-[5.45rem] items-center justify-center">
@@ -308,7 +309,7 @@ export default async function Home({ params: { locale } }) {
                 <ServiceCard
                   color="#EF8689"
                   title={t("services:serviceTitle1")}
-                  image={"/images/s1-min.png"}
+                  image={"/images/service1.webp"}
                   description={t("services:serviceDescription1")}
                 />
               </div>
@@ -318,13 +319,13 @@ export default async function Home({ params: { locale } }) {
                   <ServiceCard
                     color="#FFEF89"
                     title={t("services:serviceTitle2")}
-                    image={"/images/s1-min.png"}
+                    image={"/images/service2.webp"}
                     description={t("services:serviceDescription2")}
                   />
                   <ServiceCard
                     color="#85D6FB"
                     title={t("services:serviceTitle3")}
-                    image={"/images/s1-min.png"}
+                    image={"/images/service4.webp"}
                     description={t("services:serviceDescription3")}
                   />
                 </div>
@@ -332,13 +333,13 @@ export default async function Home({ params: { locale } }) {
                   <ServiceCard
                     color="#85D6FB"
                     title={t("services:serviceTitle4")}
-                    image={"/images/s1-min.png"}
+                    image={"/images/service3.webp"}
                     description={t("services:serviceDescription4")}
                   />
                   <ServiceCard
                     color="#FFEF89"
                     title={t("services:serviceTitle5")}
-                    image={"/images/s1-min.png"}
+                    image={"/images/service5.webp"}
                     description={t("services:serviceDescription5")}
                   />
                 </div>
@@ -364,13 +365,13 @@ export default async function Home({ params: { locale } }) {
                 description={t("services:serviceDescription1")}
               />
               <ServiceCardMobile
-                color="#EF8689"
+                color="#85D6FB"
                 title={t("services:serviceTitle2")}
                 image={"/images/s2-min.png"}
                 description={t("services:serviceDescription2")}
               />
               <ServiceCardMobile
-                color="#EF8689"
+                color="#FFEF89"
                 title={t("services:serviceTitle3")}
                 image={"/images/s3-min.png"}
                 description={t("services:serviceDescription3")}
@@ -407,48 +408,22 @@ export default async function Home({ params: { locale } }) {
                 }}
               ></h3>
             </PaddedContainer>
-            <PaddedContainer className="max-sm:overflow-x-scroll max-sm:px-0">
-              <div className=" flex gap-[1.5rem] mt-[2rem] max-sm:mb-[2.3rem] max-sm:pb-[0.2rem] sm:flex-wrap sm:justify-center">
-                <EmployeeCard
-                  className={"min-w-[10rem]"}
-                  yearWord={t("fifth-year")}
-                  image="/images/tmp1.png"
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  className={"min-w-[10rem]"}
-                  image="/images/tm2.png"
-                  yearWord={t("fifth-year")}
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  className={"min-w-[10rem]"}
-                  image="/images/tmp3.png"
-                  yearWord={t("fifth-year")}
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  className={"min-w-[10rem]"}
-                  image="/images/tmp4.png"
-                  yearWord={t("fifth-year")}
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
-                <EmployeeCard
-                  className={"min-w-[10rem]"}
-                  image="/images/tmp4.png"
-                  yearWord={t("fifth-year")}
-                  name="John Doe"
-                  position="Ortodonti Uzmanı"
-                  experience={10}
-                />
+            <PaddedContainer className="">
+              <div className="flex overflow-x-scroll gap-[1.5rem] mt-[2rem] pb-[2.3rem]">
+                {team.map((e) => {
+                  const position = t(`common:${e.title}`);
+                  return (
+                    <EmployeeCard
+                      key={e.name}
+                      className={"max-md:min-w-[12rem] min-w-[13rem]"}
+                      yearWord={t("fifth-year")}
+                      image={e.image}
+                      name={e.name}
+                      position={position}
+                      experience={e.experience}
+                    />
+                  );
+                })}
               </div>
             </PaddedContainer>
           </div>
@@ -498,7 +473,7 @@ export default async function Home({ params: { locale } }) {
               href="https://www.google.com/maps/place/Mehmet+Said+%C4%B0ZG%C4%B0+Di%C5%9F+Klini%C4%9Fi/@40.9926593,28.8451086,17z/data=!3m1!4b1!4m6!3m5!1s0x14cabb959e47b669:0xb4d1b2ae2db02431!8m2!3d40.9926593!4d28.8476835!16s%2Fg%2F11hz2jp71b?entry=ttu"
             >
               <img
-                src="/images/mapImage.png"
+                src="/images/home_map.png"
                 className="h-[40rem] w-full object-cover object-center"
                 alt=""
               />

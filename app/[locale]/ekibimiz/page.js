@@ -3,6 +3,7 @@ import AppointmentButton from "@/components/buttons/AppointmentButton";
 import EmployeeCard from "@/components/cards/EmployeeCard";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
+import { team } from "@/data";
 
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["team", "common"]);
@@ -41,70 +42,20 @@ export default async function Contact({ params: { locale } }) {
             />
           </div>
           <section className="mt-[12.5rem] mb-[7.9rem] max-sm:mt-[3rem] grid max-sm:grid-cols-2 grid-cols-4 max-lg:grid-cols-3 max-sm:gap-[1rem] gap-[2rem]">
-            <EmployeeCard
-              className={"max-w-[12.9rem] w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
-            <EmployeeCard
-              className={"w-[12.9rem] max-w-full min-w-0"}
-              yearWord={t("common:year")}
-              name="Dr. Cemil Kaya"
-              experience={5}
-              position="Diş Hekimi"
-              image="/images/tmp1.png"
-            />
+            {team.map((p) => {
+              const position = t("common:" + p.title);
+              return (
+                <EmployeeCard
+                  key={p.image}
+                  className={"max-w-[12.9rem] w-full min-w-0"}
+                  yearWord={t("common:year")}
+                  name={p.name}
+                  experience={10}
+                  position={position}
+                  image={p.image}
+                />
+              );
+            })}
           </section>
         </PaddedContainer>
       </div>
