@@ -3,6 +3,7 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
 import VideoPlayer from "./VideoPlayer";
+import { ArticleFont } from "@/app/[locale]/layout";
 export default function BlogText({ blog }) {
   const components = {
     block: {

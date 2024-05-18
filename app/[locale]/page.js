@@ -9,14 +9,17 @@ import ServiceCardMobile from "@/components/cards/ServiceCardMobile";
 import BlogCard from "@/components/cards/BlogCard";
 import BlogCardMobile from "@/components/cards/BlogCardMobile";
 import { team } from "@/data";
+import { getBlogs } from "@/services/blog";
 
 export const metaData = {
   title: "MSI Diş Kliniği",
   description: "MSI Diş Kliniği",
 };
+export const revalidate = 10800;
 
 export default async function Home({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["home", "services", "common"]);
+  const blogs = await getBlogs("");
   return (
     <main className="animate-fade-in-up relative ">
       <div
@@ -361,25 +364,32 @@ export default async function Home({ params: { locale } }) {
                 className="ml-6"
                 color="#EF8689"
                 title={t("services:serviceTitle1")}
-                image={"/images/s1-min.png"}
+                image={"/images/service1.webp"}
                 description={t("services:serviceDescription1")}
               />
               <ServiceCardMobile
                 color="#85D6FB"
                 title={t("services:serviceTitle2")}
-                image={"/images/s2-min.png"}
+                image={"/images/service2.webp"}
                 description={t("services:serviceDescription2")}
               />
               <ServiceCardMobile
                 color="#FFEF89"
                 title={t("services:serviceTitle3")}
-                image={"/images/s3-min.png"}
+                image={"/images/service4.webp"}
                 description={t("services:serviceDescription3")}
               />
               <ServiceCardMobile
                 color="#EF8689"
                 title={t("services:serviceTitle4")}
-                image={"/images/s4-min.png"}
+                image={"/images/service3.webp"}
+                description={t("services:serviceDescription4")}
+                className="mr-6"
+              />
+              <ServiceCardMobile
+                color="#85D6FB"
+                title={t("services:serviceTitle5")}
+                image={"/images/service5.webp"}
                 description={t("services:serviceDescription4")}
                 className="mr-6"
               />
@@ -388,7 +398,7 @@ export default async function Home({ params: { locale } }) {
         </section>
         <section id="fifth-section">
           <div className="w-full max-sm:mt-8">
-            <PaddedContainer>
+            <PaddedContainer className={"!overflow-y-hidden"}>
               <h3
                 style={{
                   lineHeight: "3.2rem",
@@ -402,7 +412,7 @@ export default async function Home({ params: { locale } }) {
                 style={{
                   lineHeight: "3.2rem",
                 }}
-                className="sm:hidden font-bold text-[2.3rem] text-[#1B262C]"
+                className="sm:hidden  font-bold text-[2.3rem] text-[#1B262C]"
                 dangerouslySetInnerHTML={{
                   __html: t("fifth-primary-mobile"),
                 }}
@@ -486,14 +496,14 @@ export default async function Home({ params: { locale } }) {
           <h2 className="text-[#1B262C] font-bold text-[2.5rem] mb-[1.40rem]">
             {t("blog")}
           </h2>
-          <div className="flex overflow-x-scroll pb-[2rem]">
-            <BlogCardMobile
-              date={"12.12.2021"}
-              description={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
-              }
-              title={"Lorem ipsum dolor sit amet"}
-            />
+          <div className="flex gap-[1rem] overflow-x-scroll pb-[2rem]">
+            {blogs.slice(0, 4).map((blog) => (
+              <BlogCard
+                className={"min-w-[12rem]"}
+                key={blog?.slug}
+                blog={blog ?? {}}
+              />
+            ))}
           </div>
         </PaddedContainer>
       </section>

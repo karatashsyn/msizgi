@@ -30,13 +30,13 @@ export default function ServiceCard({
         src={image}
         className={`${
           hovered ? "scale-105" : ""
-        } transition-all duration-500 absolute object-cover w-full h-full inset-0`}
+        } transition-all duration-300 absolute object-cover w-full h-full inset-0`}
         alt=""
       />
       <div
         className={`${
           hovered ? " top-[18rem] opacity-0" : "top-[13rem] "
-        } transition-all duration-500 absolute inset-0 max-sm:top-[3rem] max-md:top-[8rem] `}
+        } transition-all duration-300 absolute inset-0 max-sm:top-[3rem] max-md:top-[8rem] `}
         style={{
           // gradient from bottom to top
           background: `linear-gradient(rgba(0,0,0,0) -0%, rgba(9, 98, 234, 0.1) 20%, rgba(9, 98, 234, 0.2) 50%, ${color} 100%)`,

@@ -6,33 +6,41 @@ export const team = [
     experience: 10,
   },
   {
-    name: "Arzu Parlak",
-    title: "orthodontist",
-    image: "/images/team/arzu_parlak.webp",
-    experience: 10,
-  },
-  {
     name: "Ceyda Akın",
-    title: "orthodontist",
+    title: "dentist",
     image: "/images/team/ceyda_akin.webp",
     experience: 10,
   },
+
   {
-    name: "Eda Ar",
-    title: "orthodontist",
-    image: "/images/team/eda_ar.webp",
+    name: "Aziz Güvenç",
+    title: "dentist",
+    image: "/images/team/aziz_guvenc.webp",
     experience: 10,
   },
+
   {
     name: "Nazlıcan Kaya",
-    title: "orthodontist",
+    title: "treatment-analyst",
     image: "/images/team/nazlican_kaya.webp",
     experience: 10,
   },
   {
+    name: "Arzu Parlak",
+    title: "treatment-analyst",
+    image: "/images/team/arzu_parlak.webp",
+    experience: 10,
+  },
+  {
     name: "Rümeysa Akıcı",
-    title: "orthodontist",
+    title: "treatment-analyst",
     image: "/images/team/rumeysa_akici.webp",
+    experience: 10,
+  },
+  {
+    name: "Eda Ar",
+    title: "banko",
+    image: "/images/team/eda_ar.webp",
     experience: 10,
   },
 ];

@@ -6,6 +6,7 @@ import BlogCardMobile from "@/components/cards/BlogCardMobile";
 import BlogCardSecondary from "@/components/cards/BlogCardSecondary";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
+import { getBlogs } from "@/services/blog";
 
 const WorkingHoursInfo = ({ day, info }) => {
   return (
@@ -54,6 +55,11 @@ const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
 
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["about", "common"]);
+  const blogs = await getBlogs("");
+  if (!blogs.length) {
+    notFound();
+  } else {
+  }
   return (
     <div className="greenGradient">
       <PaddedContainer className={"overflow-hidden"}>
@@ -172,7 +178,7 @@ export default async function Contact({ params: { locale } }) {
             </span>
           </div>
           <div className="max-sm:flex gap-[1.17rem] overflow-x-scroll">
-            <div className="sm:mt-[1.75rem] max-sm:gap-[1.17rem] flex justify-between gap-[2.05rem] mb-[3.15rem] max-sm:h-[12.8rem]">
+            <div className="sm:mt-[1.75rem] max-sm:gap-[1.17rem] flex max-sm:flex-row max-lg:flex-col justify-between gap-[2.05rem] mb-[3.15rem] max-sm:h-[12.8rem]">
               <div className="flex sm:flex-col justify-between max-sm:h-full">
                 <span className="text-[#52575D] max-sm:hidden w-full max-sm:text-[1.25rem]">
                   {t("about:clinicParagraph")}
@@ -185,14 +191,14 @@ export default async function Contact({ params: { locale } }) {
               </div>
               <img
                 src="/images/clinic1.webp"
-                className="h-full max-sm:h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
+                className="sm:max-h-[38rem] mt-auto max-sm:h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
                 alt=""
               />
             </div>
-            <div className="w-full h-[23.1rem]  max-sm:gap-[1.17rem] flex gap-[2.2rem] max-sm:h-[12.8rem]">
+            <div className="w-full h-[23.1rem]  max-sm:gap-[1.17rem] max-sm:flex-row max-lg:flex-col flex gap-[2.2rem] max-sm:h-[12.8rem]">
               <img
                 src="/images/clinic3.webp"
-                className="basis-full h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
+                className="basis-full h-full max-lg:w-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
                 alt=""
               />
               <img
@@ -252,46 +258,14 @@ export default async function Contact({ params: { locale } }) {
           </div>
           <div className="flex justify-between gap-[1rem] max-sm:hidden">
             <div className="flex gap-[1rem] basis-[50%]">
-              <BlogCard
-                title="Pedodonti Nedir?"
-                date="15 Nisan 2024"
-                description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-              />
-              <BlogCard
-                title="Pedodonti Nedir?"
-                date="15 Nisan 2024"
-                description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-              />
+              {blogs.slice(0, 4).map((blog) => (
+                <BlogCard key={blog.slug} blog={blog} />
+              ))}
             </div>
             <div className="grid grid-cols-2 gap-[1rem] basis-[50%]">
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
+              {blogs.slice(4, 10).map((blog) => (
+                <BlogCardSecondary key={blog.slug} blog={blog} />
+              ))}
             </div>
           </div>
         </PaddedContainer>

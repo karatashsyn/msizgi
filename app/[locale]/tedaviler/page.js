@@ -51,40 +51,40 @@ export default async function Contact({ params: { locale } }) {
               <ServiceCard
                 color="#EF8689"
                 title={t("services:serviceTitle1")}
-                image={"/images/s1-min.png"}
+                image={"/images/service1.webp"}
                 description={t("services:serviceDescription2")}
               />
 
               <ServiceCard
                 color="#FFEF89"
                 title={t("services:serviceTitle2")}
-                image={"/images/s2-min.png"}
+                image={"/images/service2.webp"}
                 description={t("services:serviceDescription2")}
-              />
-
-              <ServiceCard
-                color="#85D6FB"
-                title={t("services:serviceTitle3")}
-                image={"/images/s3-min.png"}
-                description={t("services:serviceDescription3")}
               />
               <ServiceCard
                 color="#85D6FB"
                 title={t("services:serviceTitle4")}
-                image={"/images/s4-min.png"}
+                image={"/images/service3.webp"}
                 description={t("services:serviceDescription4")}
-              />
-              <ServiceCard
-                color="#85D6FB"
-                title={t("services:serviceTitle5")}
-                image={"/images/s5-min.png"}
-                description={t("services:serviceDescription5")}
               />
               <ServiceCard
                 color="#FFEF89"
                 title={t("services:serviceTitle6")}
-                image={"/images/canaltreatment.png"}
+                image={"/images/service6.webp"}
                 description={t("services:serviceDescription6")}
+              />
+              <ServiceCard
+                color="#85D6FB"
+                title={t("services:serviceTitle3")}
+                image={"/images/service4.webp"}
+                description={t("services:serviceDescription3")}
+              />
+
+              <ServiceCard
+                color="#EF8689"
+                title={t("services:serviceTitle5")}
+                image={"/images/service5.webp"}
+                description={t("services:serviceDescription5")}
               />
             </div>
           </div>

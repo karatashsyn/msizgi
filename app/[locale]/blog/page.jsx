@@ -4,9 +4,19 @@ import BlogCard from "@/components/cards/BlogCard";
 import BlogCardSecondary from "@/components/cards/BlogCardSecondary";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
+import { getBlogs } from "@/services/blog";
+
+export const revalidate = 3600;
 
 export default async function Blog({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["blog", "common"]);
+
+  const blogs = await getBlogs("");
+  if (!blogs.length) {
+    notFound();
+  } else {
+  }
+
   return (
     <>
       <div className="animate-fade-in-up relative">
@@ -53,148 +63,30 @@ export default async function Blog({ params: { locale } }) {
               rowGap: "2rem",
             }}
           >
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
-            <BlogCard
-              title="Pedodonti Nedir?"
-              date="15 Nisan 2024"
-              description="Pedodonti, çocuk diş hekimliği olarak da bilinir. Çocukların
-              diş ve ağız sağlığı sorunlarına odaklanan bir diş hekimliği
-              dalıdır."
-            />
+            {blogs.slice(0, 12).map((blog) => (
+              <BlogCard
+                blog={blog}
+                key={blog?.slug}
+                title={blog?.title}
+                date={blog?.date}
+                description={blog?.description}
+                img={blog?.titleImage}
+                slug={blog?.slug}
+              />
+            ))}
           </div>
           <div className=" basis-[36%] max-md:hidden">
             <h3 className="text-[1.2rem] font-bold mb-[1.5rem] text-[#85D6FB]">
               {t("blog:otherBlogs")}
             </h3>
             <div className="grid grid-cols-1 gap-[0.45rem]">
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Ortodonti Nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
-              <BlogCardSecondary
-                className={"max-w-none"}
-                date="15 Nisan 2024"
-                title="Kanal Tedavisinde dikkat edilmesi gerekenler nedir?"
-              />
+              {blogs.slice(12, blogs.length).map((blog) => (
+                <BlogCardSecondary
+                  className={"max-w-none"}
+                  key={blog?.slug}
+                  blog={blog}
+                />
+              ))}
             </div>
           </div>
         </div>
