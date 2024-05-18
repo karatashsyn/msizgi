@@ -31,24 +31,25 @@ export async function generateMetadata({ params }) {
 
     modifiedTime: blog?.date ? blog?.date : "",
     openGraph: {
-      siteName: "- Gerekli, Anlaşılabilir, Bilimsel Bilgi",
+      metadataBase: new URL("https://mehmetsaidizgi.com"),
+      siteName: "MSI - Diş Kliniği",
       locale: "tr_TR",
       type: "article",
-      title: blog ? blog?.title + " -" : "Spor ve Performans",
-      description: blog ? blog?.description : "antrenman spor",
-      url: "https://performanslab.com/" + blog?.slug,
+      title: blog ? blog?.title : "MSI - Diş Kliniği",
+      description: blog ? blog?.description : "Diş Tedavisi ve Sağlık",
+      url: "https://mehmetsaidizgi.com/blog/" + blog?.slug,
       modifiedTime: blog?.date ? blog?.date : "",
       article: {
         modifiedTime: blog?.date ? blog?.date : "",
       },
       images: [
         {
-          url: blog?.image
-            ? blog?.image
-            : "https://performanslab.com/opengraph-image.png",
+          url: blog?.img
+            ? blog?.img
+            : "https://mehmetsaidizgi.com/opengraph-image.png",
           width: 800,
           height: 600,
-          alt: blog?.title ? blog?.title : "Spor ve Performans",
+          alt: blog?.title ? blog?.title : "MSI - Diş Kliniği",
         },
       ],
     },

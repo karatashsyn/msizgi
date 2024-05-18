@@ -10,8 +10,24 @@ export const metadata = {
   title: "MSI Diş Kliniği",
   description:
     "Mehmet Said İzgi Diş Kliniği, profesyonel diş hekimleri ve son teknoloji ekipmanları ile diş sağlığınızı en üst düzeyde korur. Estetik diş hekimliği, ortodonti, implant ve genel diş bakımı hizmetlerimizle sağlıklı gülüşlere kavuşun. Kliniğimizde randevu alın ve ağrısız tedavi deneyimi yaşayın.",
-  twitter: {
+
+  openGraph: {
+    metadataBase: new URL("https://mehmetsaidizgi.com"),
+    siteName: "MSI - Diş Kliniği",
+    locale: "tr_TR",
+    type: "website",
+    title: "MSI - Diş Kliniği",
+    description: "Diş Tedavisi ve Sağlık",
     card: "summary_large_image",
+    url: "https://mehmetsaidizgi.com",
+    images: [
+      {
+        url: "https://mehmetsaidizgi.com/opengraph-image.png",
+        width: 800,
+        height: 600,
+        alt: "MSI - Diş Kliniği",
+      },
+    ],
   },
 };
 
