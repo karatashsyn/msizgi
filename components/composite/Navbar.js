@@ -1,23 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname, useParams, useRouter } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-
 import PaddedContainer from "./PaddedContainer";
 import useWidth from "@/hooks/useWidth";
 import { useTranslation } from "react-i18next";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/button";
+import FlagTR from "../icons/FlagTR";
+import FlagBg from "../icons/FlagBg";
+import FlagGb from "../icons/FlagGb";
+import FlagRu from "../icons/FlagRu";
+import FlagSa from "../icons/FlagSa";
+import MenuIcon from "../icons/MenuIcon";
 
 export default function Navbar() {
   const { locale } = useParams();
   const fullRoute = usePathname();
-  const activeRoute = useMemo(() => {
-    return fullRoute === "/" + locale || !fullRoute
-      ? "/"
-      : fullRoute.split("/").pop();
-  }, [fullRoute, locale]);
-  const [navHidden, setNavHidden] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(true);
+
+  const route = usePathname();
+
   const { width } = useWidth();
   const { t } = useTranslation("common");
   const navItems = [
@@ -28,6 +38,8 @@ export default function Navbar() {
     { name: "blog", route: "blog" },
     { name: "contact", route: "iletisim" },
   ];
+  const router = useRouter();
+  const selectedLang = router.locale;
 
   useEffect(() => {
     if (width > 768) {
@@ -35,22 +47,23 @@ export default function Navbar() {
     }
   }, [width]);
 
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const toggleMobileNav = () => {
     setMobileNavOpen(!mobileNavOpen);
   };
+
+  const activeRoute = useMemo(() => {
+    return fullRoute === "/" + locale || !fullRoute
+      ? "/"
+      : fullRoute.split("/").pop();
+  }, [fullRoute, locale]);
 
   return (
     //Web Navbar
     <>
       <nav
-        //   className={`
-        //   ${   navHidden ? "  -translate-y-[90px]" : "-translate-y-[0]"}
-        //   animate-fade-in transition-all duration-500 z-[10]
-        // bg-primary-white  flex items-center w-full max-md:hidden`}
         className={`
       animate-fade-in transition-all duration-500 relative z-[15]
-    bg-primary-white  flex items-center w-full max-md:hidden`}
+    bg-primary-white  flex items-center w-full max-sm:hidden`}
       >
         <div className="w-full flex-col justify-between ">
           <div className="flex w-full gap-[30%] pt-[1rem] bg-white pb-[0.475rem] border-b-[1.2px] border-b-[#C8C8C8]">
@@ -124,16 +137,156 @@ export default function Navbar() {
         </div>
       </nav>
       {/* Mobile Navbar */}
-      {/* <nav
-        className={`${
-          navHidden && !mobileNavOpen
-            ? "-translate-y-[100px]"
-            : "-translate-y-[0]"
-        }  transition-all  animation-fade-in duration-500 h-[80px]  z-[10] fixed top-0
-      bg-primary-white flex items-center shadow-sm w-full md:hidden`}
+      <nav
+        className={`transition-all pb-3  animation-fade-in duration-500 h-[60px] z-[100] fixed top-0
+       flex items-center  w-full sm:hidden`}
       >
-        <PaddedContainer></PaddedContainer>
-      </nav> */}
+        <PaddedContainer>
+          <div>
+            <div className="flex">
+              <div className="fixed w-min z-[15] h-[60px] flex items-ceter">
+                <div className="mr-6 h-full flex items-center">
+                  <Dropdown>
+                    <DropdownTrigger>
+                      <Button variant="bordered">
+                        <div className="flex items-center">
+                          {selectedLang?.toLocaleUpperCase()}
+                        </div>
+                      </Button>
+                    </DropdownTrigger>
+                    <DropdownMenu
+                      style={{
+                        zIndex: 1000,
+                        padding: "6px 12px",
+                        flexDirection: "column",
+                        backgroundColor: "white",
+                        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                        display: "flex",
+                      }}
+                      aria-label="Static Actions"
+                      className="bg-white-primary px-6"
+                    >
+                      <DropdownItem>
+                        <Link
+                          className="flex items-center gap-1 my-2"
+                          locale="tr"
+                          href={router.asPath}
+                          onClick={() => setMobileNavOpen(false)}
+                        >
+                          <FlagTR />
+                          <span>TR</span>
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem
+                        style={{
+                          width: "24px",
+                        }}
+                      >
+                        <Link
+                          className="flex items-center gap-1 my-2"
+                          locale="bg"
+                          href={router.asPath}
+                          onClick={() => setMobileNavOpen(false)}
+                        >
+                          <FlagBg />
+                          <span>BG</span>
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <Link
+                          className="flex items-center gap-1 my-2"
+                          onClick={() => setMobileNavOpen(false)}
+                          locale="en"
+                          href={router.asPath}
+                        >
+                          <FlagGb />
+                          <span>EN</span>
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <Link
+                          className="flex items-center gap-1 my-2"
+                          onClick={() => setMobileNavOpen(false)}
+                          locale="ru"
+                          href={router.asPath}
+                        >
+                          <FlagRu />
+                          <span>RU</span>
+                        </Link>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <Link
+                          className="flex items-center gap-1 my-2"
+                          onClick={() => setMobileNavOpen(false)}
+                          locale="ar"
+                          href={router.asPath}
+                        >
+                          <FlagSa />
+                          <span>SA</span>
+                        </Link>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                  <img
+                    className="cursor-pointer"
+                    onClick={() => {
+                      router.push("/");
+                      setMobileNavOpen(false);
+                    }}
+                    src="/images/owl-icon.png "
+                    unoptimized={true}
+                    alt=""
+                    width={136}
+                    height={43}
+                  />
+                </div>
+                <div
+                  onClick={toggleMobileNav}
+                  className={`${
+                    !mobileNavOpen && route !== "/" && route !== "/hakkimizda"
+                      ? " invert"
+                      : ""
+                  } rounded-[10px] cursor-pointer fixed bg-blue-dark flex items-center justify-center`}
+                >
+                  <MenuIcon />
+                </div>
+              </div>
+              <div
+                onClick={() => {
+                  setMobileNavOpen(false);
+                }}
+                className={`${
+                  !mobileNavOpen ? " opacity-0 pointer-events-none" : ""
+                } fixed right-0 top-0 left-0 w-[100vw] transition-opacity duration-500  bg-black/25 h-[100vh]`}
+              ></div>
+
+              <ul
+                className={`${
+                  !mobileNavOpen ? " opacity-0 pointer-events-none" : ""
+                } fixed bg-[#FF8989] pt-[5rem]  w-[62vw] transition-all duration-500 min-h-[100vh] top-0 left-0 bg-primary-white flex flex-col !text-start gap-[1.24rem] whitespace-nowrap`}
+              >
+                {navItems.map((item) => (
+                  <li key={item.name} className="w-full  text-start">
+                    <PaddedContainer>
+                      <Link
+                        onClick={() => {
+                          setMobileNavOpen(false);
+                        }}
+                        href={item.route}
+                        className={`
+                         font-bold  text-white text-[1.31rem]
+                    `}
+                      >
+                        {t(`navbar-${item.name}`)}
+                      </Link>
+                    </PaddedContainer>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </PaddedContainer>
+      </nav>
     </>
   );
 }

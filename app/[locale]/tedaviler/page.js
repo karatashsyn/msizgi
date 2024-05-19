@@ -16,7 +16,7 @@ export default async function Contact({ params: { locale } }) {
           secondCircleColor="#85D6FB"
         />
         <PaddedContainer>
-          <div className="mt-[3rem] relative z-[10]">
+          <div className="max-sm:mt-[4rem] mt-[3rem] relative z-[10]">
             <h1
               style={{
                 lineHeight: "1",

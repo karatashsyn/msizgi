@@ -28,7 +28,7 @@ export default async function Blog({ params: { locale } }) {
             secondCircleColor="#009944"
           />
           <PaddedContainer>
-            <div className="mt-[3rem] relative z-[10]">
+            <div className="max-sm:mt-[4rem] mt-[3rem] relative z-[10]">
               <h1
                 style={{
                   lineHeight: "1",

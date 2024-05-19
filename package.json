@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.0.31",
+    "@nextui-org/dropdown": "^2.1.23",
     "@portabletext/react": "^3.0.18",
     "@sanity/client": "^6.17.2",
     "@sanity/image-url": "^1.0.2",

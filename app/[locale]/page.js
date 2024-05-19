@@ -30,7 +30,7 @@ export default async function Home({ params: { locale } }) {
           height: "100%",
         }}
       ></div>
-      <div className="relative ">
+      <div className="relative  ">
         <section id="hero-section" className="max-sm:bg-[#85D6FB]">
           <PaddedContainer
             className={"!pr-0 max-w-none"}
@@ -80,7 +80,7 @@ export default async function Home({ params: { locale } }) {
               </defs>
             </svg>
 
-            <div className="mt-[5rem]  flex justify-between relative">
+            <div className="mt-[5rem] flex justify-between relative">
               <div className="flex flex-col">
                 <h1
                   className="text-[2.34rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.8rem] xl:text-[6.4rem]"

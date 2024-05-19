@@ -53,6 +53,8 @@ const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
   );
 };
 
+export const revalidate = 10800;
+
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["about", "common"]);
   const blogs = await getBlogs("");
@@ -61,7 +63,7 @@ export default async function Contact({ params: { locale } }) {
   } else {
   }
   return (
-    <div className="greenGradient">
+    <div className="max-sm:pt-12 greenGradient">
       <PaddedContainer className={"overflow-hidden"}>
         <h1 className="max-sm:text-[3.75rem] text-[6.4rem] max-sm:text-[#FFFFFF]  font-semibold">
           {t("about:aboutUs")}
