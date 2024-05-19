@@ -18,7 +18,7 @@ const BlinkingOwl = () => {
 
 export default function Loading() {
   return (
-    <div className="fixed animate-fade-in z-[250] top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-[rgba(0,0,0,0.6)]">
+    <div className="fixed animate-fade-in z-[250] top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-[rgba(0,0,0,0.32)]">
       <div className="flex justify-center items-center bg-[#fefefe] w-36 h-36 rounded-full">
         <BlinkingOwl />
       </div>
