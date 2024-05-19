@@ -249,14 +249,14 @@ export default async function Contact({ params: { locale } }) {
               __html: t("about:blogsTitleMobile"),
             }}
           ></h2>
-          <div className="flex overflow-x-scroll pb-[2rem] sm:hidden">
-            <BlogCardMobile
-              date={"12.12.2021"}
-              description={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
-              }
-              title={"Lorem ipsum dolor sit amet"}
-            />
+          <div className="flex overflow-x-scroll gap-[1rem] pb-[2rem] sm:hidden">
+            {blogs.map((blog) => (
+              <BlogCard
+                className={"min-w-[12rem]"}
+                key={blog.slug}
+                blog={blog}
+              />
+            ))}
           </div>
           <div className="flex justify-between gap-[1rem] max-sm:hidden">
             <div className="flex gap-[1rem] basis-[50%]">

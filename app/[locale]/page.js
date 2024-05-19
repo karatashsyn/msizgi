@@ -375,18 +375,21 @@ export default async function Home({ params: { locale } }) {
                 title={t("services:serviceTitle1")}
                 image={"/images/service1.webp"}
                 description={t("services:serviceDescription1")}
+                href="pedodonti"
               />
               <ServiceCardMobile
                 color="#85D6FB"
                 title={t("services:serviceTitle2")}
                 image={"/images/service2.webp"}
                 description={t("services:serviceDescription2")}
+                href="implant"
               />
               <ServiceCardMobile
                 color="#FFEF89"
                 title={t("services:serviceTitle3")}
                 image={"/images/service4.webp"}
                 description={t("services:serviceDescription3")}
+                href="ortodonti"
               />
               <ServiceCardMobile
                 color="#EF8689"
@@ -394,6 +397,7 @@ export default async function Home({ params: { locale } }) {
                 image={"/images/service3.webp"}
                 description={t("services:serviceDescription4")}
                 className="mr-6"
+                href="dis-beyazlatma"
               />
               <ServiceCardMobile
                 color="#85D6FB"
@@ -401,6 +405,7 @@ export default async function Home({ params: { locale } }) {
                 image={"/images/service5.webp"}
                 description={t("services:serviceDescription4")}
                 className="mr-6"
+                href="restoratif-dis-hekimligi"
               />
             </div>
           </div>

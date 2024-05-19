@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function ServiceCardMobile({
   title,
@@ -7,9 +9,15 @@ export default function ServiceCardMobile({
   image = "",
   color = "#EF8689",
   className = "",
+  href,
 }) {
+  const router = useRouter();
+
   return (
     <div
+      onClick={() => {
+        router.push("/hizmetler/" + href);
+      }}
       className={`${className} rounded-[1.56rem] cursor-pointer relative min-w-[16.4rem] h-[27.5rem] overflow-hidden`}
     >
       <img
