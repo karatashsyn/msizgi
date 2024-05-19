@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import initTranslations from "../i18n";
+import initTranslations from "../../i18n";
 import AppointmentButton from "@/components/buttons/AppointmentButton";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import ServiceCard from "@/components/cards/ServiceCard";

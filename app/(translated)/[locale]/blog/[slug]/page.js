@@ -3,7 +3,7 @@ import React from "react";
 import { getBlogBySlug, getBlogs } from "@/services/blog";
 import BlogText from "@/components/BlogText";
 import { notFound } from "next/navigation";
-import { ArticleFont } from "../../layout";
+import { ArticleFont } from "../../../layout";
 import BlogSuggestion from "@/components/BlogSuggestion";
 import { getFormattedDate } from "@/util";
 import initTranslations from "@/app/i18n";
