@@ -12,5 +12,40 @@
   "service1-paragraph2": "Çocuklar, diş sağlığını korumak ve gelecekte oluşabilecek problemleri önlemek için düzenli diş hekimliği kontrollerine ihtiyaç duyarlar. Pedodontistler, çocukların dişlerini temizlemek, flor uygulamak, dolgu yapmak, çürükleri tedavi etmek, diş çekimi yapmak gibi işlemleri gerçekleştirirler. Ayrıca, çocuklara ağız hijyeni konusunda eğitim verirler ve diyet alışkanlıklarını, diş fırçalama ve diş ipi kullanma alışkanlıklarını yönlendirirler.",
   "service1-paragraph3": "Pedodontistler ayrıca çocukların ağız ve diş sağlığıyla ilgili travmaları tedavi eder ve çocuklarda görülebilecek diğer ağız ve diş sorunlarına müdahale ederler.",
   "service1-paragraph4": " Pedodonti, çocukların sağlıklı bir gülümsemeye sahip olmalarını sağlamak ve yaşamları boyunca düzenli diş hekimliği alışkanlıkları geliştirmelerine yardımcı olmak için önemli bir role sahiptir.",
-  "service1-paragraph5": "Pedodonti, çocukların ağız ve diş sağlığını korumak için özel bir yaklaşım gerektirir çünkü çocukların dişleri henüz gelişme aşamasındadır ve diş hekimliği işlemleri çocukların duygusal ve fiziksel ihtiyaçlarına uygun şekilde yapılmalıdır."
+  "service1-paragraph5": "Pedodonti, çocukların ağız ve diş sağlığını korumak için özel bir yaklaşım gerektirir çünkü çocukların dişleri henüz gelişme aşamasındadır ve diş hekimliği işlemleri çocukların duygusal ve fiziksel ihtiyaçlarına uygun şekilde yapılmalıdır.",
+
+  "service2-title": "Diş İmplantları Nedir?",
+  "service2-paragraph1": "İmplantlar, kaybedilen dişlerin yerine yerleştirilen yapay diş kökleridir. Titanyum gibi biyouyumlu materyallerden yapılan implantlar, çene kemiğine cerrahi olarak yerleştirilir ve üzerine protez dişler sabitlenir.",
+  "service2-paragraph2": "Diş implantları, tek bir dişin kaybından tam dişsizliğe kadar geniş bir yelpazede kullanılabilir. İmplantlar, doğal dişlerin fonksiyonunu ve estetiğini geri kazandırarak yaşam kalitesini artırır.",
+  "service2-paragraph3": "İmplant tedavisi, çene kemiğinin yeterli miktarda ve kalitede olmasını gerektirir. İmplant yerleştirme işlemi sonrasında iyileşme süreci tamamlandıktan sonra üzerine protez dişler yerleştirilir.",
+  "service2-paragraph4": "İmplantlar, sabit ve kalıcı bir çözüm sunar. Diğer protez seçeneklerine göre daha konforlu ve güvenilir bir kullanım sağlar. Aynı zamanda, çene kemiğinin korunmasına ve erimesinin önlenmesine yardımcı olur.",
+  "service2-paragraph5": "Diş implantları, estetik görünümü iyileştirirken aynı zamanda doğal dişlere benzer bir çiğneme ve konuşma fonksiyonu sağlar. Bu sayede hastaların kendine olan güvenlerini ve yaşam kalitelerini artırır.",
+
+  "service3-title": "Diş Beyazlatma<br/> Nedir?",
+  "service3-paragraph1": "Diş beyazlatma, dişlerin rengini açarak daha beyaz ve parlak görünmelerini sağlamak için yapılan kozmetik bir diş hekimliği işlemidir. Bu işlem, çeşitli nedenlerle renk değiştiren dişlerin doğal rengini geri kazandırmayı amaçlar.",
+  "service3-paragraph2": "Dişlerin renginin değişmesine yol açan faktörler arasında çay, kahve, tütün kullanımı, yaşlanma, travma ve bazı ilaçlar bulunur. Diş beyazlatma işlemi, bu tür lekeleri ve renk değişikliklerini ortadan kaldırmak için etkili bir yöntemdir.",
+  "service3-paragraph3": "Beyazlatma işlemi, klinik ortamda veya evde uygulanabilir. Klinik beyazlatma, diş hekiminin uyguladığı profesyonel yöntemlerle daha hızlı ve etkili sonuçlar verir. Ev tipi beyazlatma ise diş hekiminin önerdiği beyazlatma kitleri ile uygulanır.",
+  "service3-paragraph4": "Diş beyazlatma işlemi, diş minesi üzerinde herhangi bir hasar oluşturmaz. İşlem sırasında diş hekiminin önerilerine uyulması, işlem sonrası hassasiyeti ve olası yan etkileri minimuma indirir.",
+  "service3-paragraph5": "Diş beyazlatma, daha estetik bir gülüş elde etmeye yardımcı olur ve bireylerin kendine olan güvenlerini artırır. Düzenli diş hekimliği kontrolleri ve uygun ağız hijyeni ile beyazlatma sonuçlarının uzun süre korunması sağlanabilir.",
+
+  "service4-title": "Ortodonti Nedir?",
+  "service4-paragraph1": "Ortodonti, dişlerin ve çenelerin düzgün bir şekilde hizalanmasını sağlamak için yapılan diş hekimliği dalıdır. Ortodontistler, diş teli ve diğer düzeltici aparatlar kullanarak dişlerin doğru pozisyonlara gelmesini sağlar.",
+  "service4-paragraph2": "Çapraşık dişler, çene darlığı, açık kapanış, derin kapanış gibi sorunlar ortodontik tedavi gerektirebilir. Bu tür düzensizlikler hem estetik hem de fonksiyonel problemler yaratabilir.",
+  "service4-paragraph3": "Ortodontik tedavi, çocukluktan yetişkinliğe kadar her yaşta uygulanabilir. Tedavi süresi ve yöntemi, bireyin ihtiyaçlarına ve ortodontik problemin ciddiyetine göre değişir.",
+  "service4-paragraph4": "Modern ortodontik tedavi seçenekleri arasında metal diş telleri, şeffaf plaklar (Invisalign gibi) ve lingual teller (dişlerin arkasına takılan teller) bulunur. Bu yöntemler, estetik kaygılar gözetilerek kişiye özel planlanır.",
+  "service4-paragraph5": "Ortodonti, sadece estetik bir gülüş kazandırmakla kalmaz, aynı zamanda diş sağlığını korur ve çiğneme fonksiyonunu iyileştirir. Doğru hizalanmış dişler, temizlenmesi daha kolay olduğundan diş çürüğü ve diş eti hastalıkları riskini de azaltır.",
+
+  "service5-title": "Kanal Tedavisi<br/> Nedir?",
+  "service5-paragraph1": "Kanal tedavisi, dişin iç kısmında bulunan pulpa adı verilen canlı dokunun enfekte olması veya hasar görmesi durumunda uygulanan bir diş hekimliği işlemidir. Bu işlem, dişi kurtarmak ve enfeksiyonun yayılmasını önlemek amacıyla yapılır.",
+  "service5-paragraph2": "Kanal tedavisi sırasında, dişin pulpası çıkarılır, kanal temizlenir ve dezenfekte edilir. Ardından, kanal özel dolgu malzemeleri ile doldurularak kapatılır ve dişin doğal yapısı korunur.",
+  "service5-paragraph3": "Kanal tedavisinin yaygın belirtileri arasında şiddetli diş ağrısı, sıcak veya soğuğa karşı hassasiyet, diş eti şişmesi ve renk değişikliği bulunur. Bu tür belirtilerle karşılaşıldığında hemen diş hekimine başvurulmalıdır.",
+  "service5-paragraph4": "Kanal tedavisi, modern teknoloji ve teknikler kullanılarak genellikle tek seansta tamamlanabilir. Tedavi sonrasında, dişin üzerine kuron (kaplama) yerleştirilerek dişin fonksiyonelliği ve estetiği artırılır.",
+  "service5-paragraph5": "Kanal tedavisi, enfekte dişin çekilmesini önleyerek diş kaybını engeller. Doğru bir tedavi ve bakım ile kanal tedavisi görmüş dişler uzun yıllar sağlıklı bir şekilde kullanılabilir.",
+
+  "service6-title": "Restoratif Diş Hekimliği<br/> Nedir?",
+  "service6-paragraph1": "Restoratif diş hekimliği, hasar görmüş veya kaybedilmiş dişlerin onarılması ve eski fonksiyonlarının geri kazandırılması amacıyla yapılan diş hekimliği dalıdır. Bu alanda kullanılan tedaviler, dişlerin estetiğini ve fonksiyonunu iyileştirir.",
+  "service6-paragraph2": "Restoratif diş hekimliği işlemleri arasında dolgular, kuronlar, köprüler ve protezler bulunur. Bu tedaviler, diş çürükleri, travmalar veya diğer diş problemleri sonucu oluşan hasarları giderir.",
+  "service6-paragraph3": "Dolgu işlemi, diş çürüğü nedeniyle oluşan boşlukları doldurarak dişin doğal yapısını korur. Kuronlar, büyük hasar görmüş dişlerin üzerine yerleştirilen kaplamalardır ve dişi güçlendirir.",
+  "service6-paragraph4": "Köprüler, eksik dişlerin yerine konularak boşlukları doldurur ve komşu dişlerin yer değiştirmesini önler. Protezler ise bir veya birden fazla dişin kaybı durumunda kullanılan çıkarılabilir veya sabit yapay dişlerdir.",
+  "service6-paragraph5": "Restoratif diş hekimliği, hastaların diş sağlığını ve yaşam kalitesini iyileştirir. Doğru bir tedavi planı ile estetik ve fonksiyonel olarak tatmin edici sonuçlar elde edilir ve hastaların kendine güvenleri artar."
 }

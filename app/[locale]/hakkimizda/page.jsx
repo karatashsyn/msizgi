@@ -63,7 +63,7 @@ export default async function Contact({ params: { locale } }) {
   } else {
   }
   return (
-    <div className="max-sm:pt-12 greenGradient">
+    <main className="max-sm:pt-12 greenGradient">
       <PaddedContainer className={"overflow-hidden"}>
         <h1 className="max-sm:text-[3.75rem] text-[6.4rem] max-sm:text-[#FFFFFF]  font-semibold">
           {t("about:aboutUs")}
@@ -74,7 +74,7 @@ export default async function Contact({ params: { locale } }) {
         <div className="flex justify-between gap-[3.4rem] max-sm:flex-col">
           <img
             src="/images/about1.png"
-            className="sm:w-[24rem] sm:h-[35rem] max-sm:min-w-full object-cover object-center max-sm:max-h-[15.9rem] max-sm:rounded-[1.17rem]"
+            className="sm:min-w-[24rem] sm:h-[35rem] max-sm:min-w-full object-cover object-center max-sm:max-h-[15.9rem] max-sm:rounded-[1.17rem]"
             alt="#"
           />
           <div>
@@ -272,6 +272,6 @@ export default async function Contact({ params: { locale } }) {
           </div>
         </PaddedContainer>
       </section>
-    </div>
+    </main>
   );
 }

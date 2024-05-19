@@ -10,6 +10,7 @@ import BlogCard from "@/components/cards/BlogCard";
 import BlogCardMobile from "@/components/cards/BlogCardMobile";
 import { team } from "@/data";
 import { getBlogs } from "@/services/blog";
+import Link from "next/link";
 
 export const metaData = {
   title: "MSI Diş Kliniği",
@@ -114,7 +115,7 @@ export default async function Home({ params: { locale } }) {
               </div>
 
               <img
-                className="z-[2] h-[9rem] sm:h-[12rem] md:h-[16rem] lg:h-[20rem] xl:h-[22rem]"
+                className="z-[2] animate-left-slide translate-x-[99%] h-[9rem] sm:h-[12rem] md:h-[16rem] lg:h-[20rem] xl:h-[22rem]"
                 src={"/svg/owl.svg"}
                 alt="MSI Diş Kliniği Logo"
               />
@@ -265,25 +266,28 @@ export default async function Home({ params: { locale } }) {
                   className="mt-[1.75rem]"
                 />
                 <div className="mt-[1.55rem] flex items-end">
-                  <div
-                    style={{
-                      boxShadow: "0px 0px 20px 0px rgba(0, 40, 255, 0.15)",
-                    }}
-                    className="h-[19rem] transition-shadow duration-300 w-[19rem] overflow-hidden cursor-pointer translate-y-[3.45rem] relative"
-                  >
-                    <img
-                      className={`hover:scale-105 transition-all duration-300 w-full h-full`}
-                      src="/images/dental-prosthesis.webp"
-                      alt=""
-                    />
-                    <div className="bg-primary rounded-full w-[2.5rem] h-[2.5rem] flex absolute left-[2rem] bottom-[5.45rem] items-center justify-center">
+                  <Link href={"/iletisim"}>
+                    <div
+                      style={{
+                        boxShadow: "0px 0px 20px 0px rgba(0, 40, 255, 0.15)",
+                      }}
+                      className="h-[19rem] transition-shadow duration-300 w-[19rem] overflow-hidden cursor-pointer translate-y-[3.45rem] relative"
+                    >
                       <img
-                        src="/svg/forward.svg"
+                        className={`hover:scale-105 transition-all duration-300 w-full h-full`}
+                        src="/images/dental-prosthesis.webp"
                         alt=""
-                        className="max-w-[25%] ml-1"
                       />
+
+                      <div className="bg-primary rounded-full w-[2.5rem] h-[2.5rem] flex absolute left-[2rem] bottom-[5.45rem] items-center justify-center">
+                        <img
+                          src="/svg/forward.svg"
+                          alt=""
+                          className="max-w-[25%] ml-1"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                   <div className="h-[12.1rem] w-[15rem] px-[1.5rem] flex items-center justify-center bg-primary">
                     <p
                       className="text-white font-semibold"
@@ -314,7 +318,7 @@ export default async function Home({ params: { locale } }) {
                   title={t("services:serviceTitle1")}
                   image={"/images/service1.webp"}
                   description={t("services:serviceDescription1")}
-                  // href="pedodonti"
+                  href="pedodonti"
                 />
               </div>
 
@@ -325,12 +329,14 @@ export default async function Home({ params: { locale } }) {
                     title={t("services:serviceTitle2")}
                     image={"/images/service2.webp"}
                     description={t("services:serviceDescription2")}
+                    href={"implant"}
                   />
                   <ServiceCard
                     color="#85D6FB"
                     title={t("services:serviceTitle3")}
                     image={"/images/service4.webp"}
                     description={t("services:serviceDescription3")}
+                    href={"ortodonti"}
                   />
                 </div>
                 <div className="flex flex-col translate-y-4 gap-[2.8rem]">
@@ -339,12 +345,14 @@ export default async function Home({ params: { locale } }) {
                     title={t("services:serviceTitle4")}
                     image={"/images/service3.webp"}
                     description={t("services:serviceDescription4")}
+                    href={"dis-beyazlatma"}
                   />
                   <ServiceCard
                     color="#FFEF89"
                     title={t("services:serviceTitle5")}
                     image={"/images/service5.webp"}
                     description={t("services:serviceDescription5")}
+                    href={"restoratif-dis-hekimligi"}
                   />
                 </div>
               </div>

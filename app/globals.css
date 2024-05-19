@@ -24,6 +24,9 @@ html {
 
 @keyframes blink {
   0% {
+    transform: translateY(0px);
+  }
+  20% {
     transform: translateY(-24px);
   }
   50% {
@@ -36,11 +39,9 @@ html {
   80% {
     transform: translateY(-24px);
   }
-  90% {
-    transform: translateY(-0px);
-  }
+
   100% {
-    transform: translateY(-24px);
+    transform: translateY(0px);
   }
 }
 
@@ -155,6 +156,14 @@ h2 span {
 
 .info-article p {
   margin: 20px 0;
+}
+
+.animate-left-slide {
+  animation-name: left-slide;
+  animation-duration: 700ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade-in {
@@ -311,6 +320,15 @@ h2 span {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+@keyframes left-slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes loading {

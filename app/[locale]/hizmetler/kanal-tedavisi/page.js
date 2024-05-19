@@ -23,8 +23,8 @@ export default async function Pedodonti({ params: { locale } }) {
         className="img-container relative w-full "
       >
         <img
-          src="/images/info/i1t.webp"
-          alt="Pedodonti"
+          src="/images/info/kanal/4.webp"
+          alt="Kanal Tedavisi"
           className="absolute inset-0 max-h-full w-full object-cover"
         />
         <div className="w-full h-full absolute left-0 top-0 bg-black opacity-30"></div>
@@ -37,7 +37,7 @@ export default async function Pedodonti({ params: { locale } }) {
         >
           <h1
             className="max-lg:text-[3rem] max-sm:text-[1.7rem] max-sm:leading-[1.7rem] max-md:leading-[2rem] max-md:text-[2rem] text-[3.5rem] leading-[3.5rem] text-white text-center font-bold"
-            dangerouslySetInnerHTML={{ __html: t("info:service1-title") }}
+            dangerouslySetInnerHTML={{ __html: t("info:service5-title") }}
           ></h1>
         </div>
       </div>
@@ -49,54 +49,52 @@ export default async function Pedodonti({ params: { locale } }) {
             </h6>
             <ul className="flex flex-col mt-[1rem] gap-[0.5rem]">
               <li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/pedodonti"}
-                  >
-                    {t("info:service1")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/implant"}
-                  >
-                    {t("info:service2")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/dis-beyazlatma"}
-                  >
-                    {t("info:service3")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/ortodonti"}
-                  >
-                    {t("info:service4")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/kanal-tedavisi"}
-                  >
-                    {t("info:service5")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#52575D] text-[0.85rem]"
-                    href={"/hizmetler/restoratif-dis-hekimligi"}
-                  >
-                    {t("info:service6")}
-                  </Link>
-                </li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/pedodonti"}
+                >
+                  {t("info:service1")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/implant"}
+                >
+                  {t("info:service2")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/dis-beyazlatma"}
+                >
+                  {t("info:service5")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/ortodonti"}
+                >
+                  {t("info:service4")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/kanal-tedavisi"}
+                >
+                  {t("info:service5")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-[#52575D] text-[0.85rem]"
+                  href={"/hizmetler/restoratif-dis-hekimligi"}
+                >
+                  {t("info:service6")}
+                </Link>
               </li>
             </ul>
             <div className="mt-[3.75rem]">
@@ -112,31 +110,31 @@ export default async function Pedodonti({ params: { locale } }) {
           </div>
           <div className="info-article text-[#52575D] leading-[1.3rem]">
             <article>
-              <p>{t("info:service1-paragraph1")}</p>
+              <p>{t("info:service5-paragraph1")}</p>
               <div className="flex max-lg:flex-col gap-[1.25rem]">
                 <img
-                  alt="Pedodonti"
+                  alt="Kanal Tedavisi"
                   className="max-lg:max-w-full max-lg:w-full max-w-[19rem] max-sm:hidden max-h-[24rem] object-cover"
-                  src="/images/info/i10.webp"
+                  src="/images/info/kanal/1.webp"
                 />
-                <p>{t("info:service1-paragraph2")}</p>
+                <p>{t("info:service5-paragraph2")}</p>
               </div>
-              <p>{t("info:service1-paragraph3")}</p>
-              <p>{t("info:service1-paragraph4")}</p>
-              <p>{t("info:service1-paragraph5")}</p>
+              <p>{t("info:service5-paragraph3")}</p>
+              <p>{t("info:service5-paragraph4")}</p>
+              <p>{t("info:service5-paragraph5")}</p>
               <img
-                alt="Pedodonti"
+                alt="Kanal Tedavisi"
                 className="w-full max-h-[24rem] object-cover"
-                src="/images/info/i11.png"
+                src="/images/info/kanal/2.webp"
               />
               <div className=" flex mt-[1rem] max-w-full gap-[1rem]">
-                {/* 5images from i12.png to i16.png */}
+                {/* 5images from i22.png to i26.png */}
                 {[...Array(5)].map((_, i) => (
                   <img
                     key={i}
-                    alt="Pedodonti"
+                    alt="Kanal Tedavisi"
                     className="overflow-hidden object-cover"
-                    src={`/images/info/i${i + 12}.png`}
+                    src={`/images/info/kanal/${i + 4}.webp`}
                   />
                 ))}
               </div>
@@ -189,7 +187,7 @@ export default async function Pedodonti({ params: { locale } }) {
                   className="text-[#52575D] text-[0.85rem]"
                   href={"/hizmetler/dis-beyazlatma"}
                 >
-                  {t("info:service3")}
+                  {t("info:service5")}
                 </Link>
               </li>
               <li>

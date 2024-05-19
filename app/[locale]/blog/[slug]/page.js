@@ -68,7 +68,7 @@ export default async function BlogDetail({ params }) {
     notFound();
   }
   return (
-    <>
+    <main>
       <div
         style={{
           fontFamily: ArticleFont.fontFamily,
@@ -84,7 +84,7 @@ export default async function BlogDetail({ params }) {
             />
           </div>
 
-          <div className="max-md:px-[3rem] max-lg:px-[4rem] px-[7.5rem]">
+          <article className="max-md:px-[3rem] max-lg:px-[4rem] px-[7.5rem]">
             <h1 className="!mt-[6rem] mb-[0.6rem] leading-none text-[3.5rem] font-bold">
               {blog?.title}
             </h1>
@@ -98,10 +98,10 @@ export default async function BlogDetail({ params }) {
             >
               <BlogText blog={blog} />
             </div>
-          </div>
+          </article>
         </div>
       </div>
       <BlogSuggestion recentBlogsText={recentBlogsText} />
-    </>
+    </main>
   );
 }

@@ -80,7 +80,7 @@ export default function Navbar() {
                 />
               </Link>
               <div className="flex gap-[4.8rem]">
-                <a href="#" className="flex  items-center gap-[0.5rem]">
+                <a className="flex  pointer-events-none cursor-default items-center gap-[0.5rem]">
                   <img src="/svg/clock.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap ">
                     {t("navbar-days") + ": "}
@@ -89,13 +89,20 @@ export default function Navbar() {
                     </span>
                   </span>
                 </a>
-                <a href="#" className="flex  items-center gap-[0.5rem]">
+                <a
+                  href="tel:5418805050"
+                  className="flex  items-center gap-[0.5rem]"
+                >
                   <img src="/svg/phone-alt.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap underline">
                     {t("navbar-phone")}
                   </span>
                 </a>
-                <a href="#" className="flex  items-center gap-[0.5rem]">
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/Mehmet+Said+%C4%B0ZG%C4%B0+Di%C5%9F+Klini%C4%9Fi/@40.9926593,28.8451086,17z/data=!3m1!4b1!4m6!3m5!1s0x14cabb959e47b669:0xb4d1b2ae2db02431!8m2!3d40.9926593!4d28.8476835!16s%2Fg%2F11hz2jp71b?entry=ttu"
+                  className="flex  items-center gap-[0.5rem]"
+                >
                   <img src="/svg/location.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap ">
                     {t("navbar-address")}

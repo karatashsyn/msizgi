@@ -7,7 +7,7 @@ import PageGradient from "@/components/PageGradient";
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["services", "common"]);
   return (
-    <div className="animate-fade-in-up relative overflow-hidden">
+    <main className="animate-fade-in-up relative overflow-hidden">
       <div className="relative ">
         <PageGradient
           className={"max-sm:opacity-25"}
@@ -90,6 +90,6 @@ export default async function Contact({ params: { locale } }) {
           </div>
         </PaddedContainer>
       </div>
-    </div>
+    </main>
   );
 }

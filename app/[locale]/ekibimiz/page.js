@@ -8,7 +8,7 @@ import { team } from "@/data";
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["team", "common"]);
   return (
-    <div className="w-full animate-fade-in-up relative">
+    <main className="w-full animate-fade-in-up relative">
       <div className="relative ">
         <PageGradient
           className={"max-sm:opacity-25"}
@@ -59,6 +59,6 @@ export default async function Contact({ params: { locale } }) {
           </section>
         </PaddedContainer>
       </div>
-    </div>
+    </main>
   );
 }

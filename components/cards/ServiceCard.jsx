@@ -9,13 +9,14 @@ export default function ServiceCard({
   image = "",
   color = "#EF8689",
   className = "",
+  href,
 }) {
   const [hovered, setHovered] = useState(false);
   const router = useRouter();
   return (
     <div
       onClick={() => {
-        router.push("/hizmetler/pedodonti");
+        router.push("/hizmetler/" + href);
       }}
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}

@@ -18,7 +18,7 @@ export default async function Blog({ params: { locale } }) {
   }
 
   return (
-    <>
+    <main>
       <div className="animate-fade-in-up relative">
         <div className="relative ">
           <PageGradient
@@ -91,6 +91,6 @@ export default async function Blog({ params: { locale } }) {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
