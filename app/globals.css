@@ -27,6 +27,7 @@ html {
   font-smooth: antialiased;
   -webkit-font-smoothing: antialiased;
   font-family: "grotesk-regular", sans-serif;
+  scroll-behavior: smooth;
 }
 /* Do not apply grotestk-regular font for .blog-content class */
 

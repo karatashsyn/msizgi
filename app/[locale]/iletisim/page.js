@@ -49,39 +49,45 @@ export default async function Contact({ params: { locale } }) {
               <img
                 src="/images/contactmap.png"
                 alt="Contact Us"
-                className="max-w-full max-h-[27.5rem] mt-[2.9rem] mb-[4.3rem]"
+                className="max-w-full max-h-[27.5rem] mt-[2.9rem]"
               />
             </a>
-            <div className="flex justify-between mb-12 max-lg:flex-col md:gap-[3rem]">
-              <iframe
-                className="max-lg:w-full lg:max-w-[40.5rem] h-[48rem]"
-                title="Klinik Adı Randevu"
-                name="online-appointment-iframe"
-                allow="fullscreen"
-                data-src=""
-                src="https://klinik.medicasimple.com/online-randevu/eyJpZCI6MjE2LCJxIjoibWVkaWNhc2ltcGxlXzIyIiwiZGVmYXVsdExhbmd1YWdlIjoidHIifQ%253D%253D"
-                width="100%"
-                height="100%"
-              ></iframe>
-              <div className="text-[#1B262C] flex flex-col gap-[1rem] max-lg:mt-[6rem]">
-                <div className="flex flex-col">
-                  <span className="">{t("contact:workingHours")}</span>
-                  <span className="font-bold">
-                    {t("contact:workingHoursData")}
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="">{t("contact:phone")}</span>
-                  <span className="font-bold underline">
-                    {t("contact:phoneData")}
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="">{t("contact:address")}</span>
-                  <span className="font-bold">{t("contact:addressData")}</span>
+
+            <section id="appointment">
+              <div className="flex justify-between  mt-[4.3rem] mb-12 max-lg:flex-col md:gap-[3rem]">
+                <iframe
+                  className="max-lg:w-full lg:max-w-[40.5rem] h-[48rem]"
+                  title="Klinik Adı Randevu"
+                  name="online-appointment-iframe"
+                  allow="fullscreen"
+                  data-src=""
+                  src="https://klinik.medicasimple.com/online-randevu/eyJpZCI6MjE2LCJxIjoibWVkaWNhc2ltcGxlXzIyIiwiZGVmYXVsdExhbmd1YWdlIjoidHIifQ%253D%253D"
+                  width="100%"
+                  height="100%"
+                ></iframe>
+
+                <div className="text-[#1B262C] flex flex-col gap-[1rem] max-lg:mt-[6rem]">
+                  <div className="flex flex-col">
+                    <span className="">{t("contact:workingHours")}</span>
+                    <span className="font-bold">
+                      {t("contact:workingHoursData")}
+                    </span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="">{t("contact:phone")}</span>
+                    <span className="font-bold underline">
+                      {t("contact:phoneData")}
+                    </span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="">{t("contact:address")}</span>
+                    <span className="font-bold">
+                      {t("contact:addressData")}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         </PaddedContainer>
       </div>
