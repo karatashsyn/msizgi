@@ -53,6 +53,7 @@ export default async function Contact({ params: { locale } }) {
                 title={t("services:serviceTitle1")}
                 image={"/images/service1.webp"}
                 description={t("services:serviceDescription2")}
+                href={"pedodonti"}
               />
 
               <ServiceCard
@@ -60,24 +61,28 @@ export default async function Contact({ params: { locale } }) {
                 title={t("services:serviceTitle2")}
                 image={"/images/service2.webp"}
                 description={t("services:serviceDescription2")}
+                href={"implant"}
               />
               <ServiceCard
                 color="#85D6FB"
                 title={t("services:serviceTitle4")}
                 image={"/images/service3.webp"}
                 description={t("services:serviceDescription4")}
+                href={"dis-beyazlatma"}
               />
               <ServiceCard
                 color="#FFEF89"
                 title={t("services:serviceTitle6")}
                 image={"/images/service6.webp"}
                 description={t("services:serviceDescription6")}
+                href={"kanal-tedavisi"}
               />
               <ServiceCard
                 color="#85D6FB"
                 title={t("services:serviceTitle3")}
                 image={"/images/service4.webp"}
                 description={t("services:serviceDescription3")}
+                href={"ortodonti"}
               />
 
               <ServiceCard
@@ -85,6 +90,7 @@ export default async function Contact({ params: { locale } }) {
                 title={t("services:serviceTitle5")}
                 image={"/images/service5.webp"}
                 description={t("services:serviceDescription5")}
+                href={"restoratif-dis-hekimligi"}
               />
             </div>
           </div>
