@@ -33,11 +33,11 @@ export default function Navbar() {
   const { t } = useTranslation("common");
   const navItems = [
     { name: "home", route: "/" },
-    { name: "aboutUs", route: "hakkimizda" },
-    { name: "treatments", route: "tedaviler" },
-    { name: "team", route: "ekibimiz" },
-    { name: "blog", route: "blog" },
-    { name: "contact", route: "iletisim" },
+    { name: "aboutUs", route: "/hakkimizda" },
+    { name: "treatments", route: "/tedaviler" },
+    { name: "team", route: "/ekibimiz" },
+    { name: "blog", route: "/blog" },
+    { name: "contact", route: "/iletisim" },
   ];
   const router = useRouter();
   const selectedLang = router.locale;
@@ -113,8 +113,7 @@ export default function Navbar() {
                       <Link
                         href={item.route}
                         className={`${
-                          item.route === activeRoute ||
-                          (item.route === "/" && !activeRoute)
+                          item.route.slice(1, item.route.length) === activeRoute
                             ? "text-primary-bright "
                             : ""
                         } ${

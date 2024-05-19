@@ -15,7 +15,7 @@ export default function PageGradient({
         }}
       ></div>
       <div
-        className="absolute left-[8.5rem] top-[1rem] w-[22.9rem] h-[22.9rem] rounded-full opacity-[0.35] blur-[2.8rem]"
+        className="pointer-events-none absolute left-[8.5rem] top-[1rem] w-[22.9rem] h-[22.9rem] rounded-full opacity-[0.35] blur-[2.8rem]"
         style={{
           background: `linear-gradient(180deg, ${firstCircleColor} 0%, rgb(242,247,255) 100%)`,
         }}

@@ -78,7 +78,7 @@ export default async function BlogDetail({ params }) {
         <div className="prose min-w-full w-full">
           <div className="w-full flex justify-center">
             <img
-              className=" !w-full my-0 max-h-[24rem] object-cover rounded-md"
+              className=" !w-full my-0 max-h-[24rem] object-cover "
               src={blog?.img}
               alt="blog-topic"
             />
