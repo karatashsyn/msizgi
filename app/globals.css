@@ -18,6 +18,32 @@ html {
   }
 }
 
+.animate-blink {
+  animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    transform: translateY(-24px);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  65% {
+    transform: translateY(-0px);
+  }
+
+  80% {
+    transform: translateY(-24px);
+  }
+  90% {
+    transform: translateY(-0px);
+  }
+  100% {
+    transform: translateY(-24px);
+  }
+}
+
 * {
   font-size: 1rem;
   margin: 0;

@@ -62,7 +62,7 @@ s0.parentNode.insertBefore(s1,s0);
             <Navbar />
           </TranslationProvider>
         </header>
-        <div className="!min-h-[100vh]">{children}</div>
+        <div className="!min-h-[100vh]">{<>{children}</>}</div>
         <TranslationProvider
           namespaces={["common"]}
           locale={locale}
