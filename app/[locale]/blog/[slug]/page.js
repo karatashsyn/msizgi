@@ -23,6 +23,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: blog ? blog?.title : "MSI - Diş Kliniği",
+    metadataBase: new URL("https://mehmetsaidizgi.com"),
     description: blog?.description
       ? blog?.description
       : blog?.content.filter(

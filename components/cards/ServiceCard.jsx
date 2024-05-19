@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ServiceCard({
   title,
@@ -10,8 +11,12 @@ export default function ServiceCard({
   className = "",
 }) {
   const [hovered, setHovered] = useState(false);
+  const router = useRouter();
   return (
     <div
+      onClick={() => {
+        router.push("/hizmetler/pedodonti");
+      }}
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
       style={{

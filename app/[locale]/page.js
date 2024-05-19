@@ -314,6 +314,7 @@ export default async function Home({ params: { locale } }) {
                   title={t("services:serviceTitle1")}
                   image={"/images/service1.webp"}
                   description={t("services:serviceDescription1")}
+                  // href="pedodonti"
                 />
               </div>
 
