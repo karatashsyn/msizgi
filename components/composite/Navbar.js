@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
@@ -24,7 +25,7 @@ import MenuIcon from "../icons/MenuIcon";
 export default function Navbar() {
   const { locale } = useParams();
   const fullRoute = usePathname();
-  const [mobileNavOpen, setMobileNavOpen] = useState(true);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const route = usePathname();
 
@@ -139,118 +140,37 @@ export default function Navbar() {
       {/* Mobile Navbar */}
       <nav
         className={`transition-all pb-3  animation-fade-in duration-500 h-[60px] z-[100] fixed top-0
-       flex items-center  w-full sm:hidden`}
+       flex  items-center  w-full sm:hidden`}
       >
-        <PaddedContainer>
-          <div>
-            <div className="flex">
-              <div className="fixed w-min z-[15] h-[60px] flex items-ceter">
-                <div className="mr-6 h-full flex items-center">
-                  <Dropdown>
-                    <DropdownTrigger>
-                      <Button variant="bordered">
-                        <div className="flex items-center">
-                          {selectedLang?.toLocaleUpperCase()}
-                        </div>
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu
-                      style={{
-                        zIndex: 1000,
-                        padding: "6px 12px",
-                        flexDirection: "column",
-                        backgroundColor: "white",
-                        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                        display: "flex",
-                      }}
-                      aria-label="Static Actions"
-                      className="bg-white-primary px-6"
-                    >
-                      <DropdownItem>
-                        <Link
-                          className="flex items-center gap-1 my-2"
-                          locale="tr"
-                          href={router.asPath}
-                          onClick={() => setMobileNavOpen(false)}
-                        >
-                          <FlagTR />
-                          <span>TR</span>
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem
-                        style={{
-                          width: "24px",
-                        }}
-                      >
-                        <Link
-                          className="flex items-center gap-1 my-2"
-                          locale="bg"
-                          href={router.asPath}
-                          onClick={() => setMobileNavOpen(false)}
-                        >
-                          <FlagBg />
-                          <span>BG</span>
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <Link
-                          className="flex items-center gap-1 my-2"
-                          onClick={() => setMobileNavOpen(false)}
-                          locale="en"
-                          href={router.asPath}
-                        >
-                          <FlagGb />
-                          <span>EN</span>
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <Link
-                          className="flex items-center gap-1 my-2"
-                          onClick={() => setMobileNavOpen(false)}
-                          locale="ru"
-                          href={router.asPath}
-                        >
-                          <FlagRu />
-                          <span>RU</span>
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <Link
-                          className="flex items-center gap-1 my-2"
-                          onClick={() => setMobileNavOpen(false)}
-                          locale="ar"
-                          href={router.asPath}
-                        >
-                          <FlagSa />
-                          <span>SA</span>
-                        </Link>
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                  <img
-                    className="cursor-pointer"
-                    onClick={() => {
-                      router.push("/");
-                      setMobileNavOpen(false);
-                    }}
-                    src="/images/owl-icon.png "
-                    unoptimized={true}
-                    alt=""
-                    width={136}
-                    height={43}
-                  />
-                </div>
+        <PaddedContainer className={""}>
+          <div className="flex w-full">
+            <div className="flex justify-between ">
+              <div className="fixed z-[100] max-w-0  w-full h-[60px] flex justify-between">
                 <div
                   onClick={toggleMobileNav}
                   className={`${
                     !mobileNavOpen && route !== "/" && route !== "/hakkimizda"
                       ? " invert"
                       : ""
-                  } rounded-[10px] cursor-pointer fixed bg-blue-dark flex items-center justify-center`}
+                  } ${
+                    mobileNavOpen ? "" : ""
+                  } transition-opacity duration-500 rounded-[10px] cursor-pointer !z-[200] fixed flex items-center justify-center`}
                 >
                   <MenuIcon />
                 </div>
+
+                <div
+                  className={`${
+                    !mobileNavOpen ? "opacity-0" : ""
+                  } transition-opacity duration-500 fixed flex justify-end left-0 w-[59vw]`}
+                >
+                  <img
+                    className="-translate-y-2 max-w-[1.8rem]"
+                    src="/images/owl_white.png"
+                  />
+                </div>
               </div>
+
               <div
                 onClick={() => {
                   setMobileNavOpen(false);
