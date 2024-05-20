@@ -7,6 +7,7 @@ import BlogSuggestion from "@/components/BlogSuggestion";
 import { getFormattedDate } from "@/util";
 import initTranslations from "@/app/i18n";
 import { ArticleFont } from "@/app/(translated)/layout";
+import PaddedContainer from "@/components/composite/PaddedContainer";
 
 export const revalidate = 3600;
 
@@ -83,22 +84,23 @@ export default async function BlogDetail({ params }) {
               alt="blog-topic"
             />
           </div>
-
-          <article className="max-md:px-[3rem] max-lg:px-[4rem] px-[7.5rem]">
-            <h1 className="!mt-[6rem] mb-[0.6rem] leading-none text-[3.5rem] font-bold">
-              {blog?.title}
-            </h1>
-            <span className="text-[#062D92] font-light text-[0.85rem]">
-              {getFormattedDate(blog?.date)}
-            </span>
-            <div
-              className={
-                "text-[1rem] w-full blog-content " + ArticleFont.className
-              }
-            >
-              <BlogText blog={blog} />
-            </div>
-          </article>
+          <PaddedContainer>
+            <article className="">
+              <h1 className="!mt-[6rem] mb-[0.6rem] leading-none text-[3.5rem] font-bold">
+                {blog?.title}
+              </h1>
+              <span className="text-[#062D92] font-light text-[0.85rem]">
+                {getFormattedDate(blog?.date)}
+              </span>
+              <div
+                className={
+                  "text-[1rem] w-full blog-content " + ArticleFont.className
+                }
+              >
+                <BlogText blog={blog} />
+              </div>
+            </article>
+          </PaddedContainer>
         </div>
       </div>
       <BlogSuggestion recentBlogsText={recentBlogsText} />
