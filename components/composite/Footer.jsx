@@ -40,7 +40,7 @@ export default function Footer() {
             <Image
               unoptimized={true}
               className="w-[7.4rem]  cursor-pointer mb-[3.8rem]"
-              src="/images/owl-icon.png "
+              src="/images/navsmall.png"
               alt="/"
               width={148}
               height={66}
