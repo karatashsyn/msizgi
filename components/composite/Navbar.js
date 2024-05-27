@@ -72,8 +72,8 @@ export default function Navbar() {
               <Link href="/">
                 <Image
                   unoptimized={true}
-                  className="w-[7.4rem] min-w-[4rem]  cursor-pointer"
-                  src="/images/owl-icon.png "
+                  className="w-[7.4rem] min-w-[6rem]  cursor-pointer"
+                  src="/images/navsmall.png "
                   alt="/"
                   width={148}
                   height={66}

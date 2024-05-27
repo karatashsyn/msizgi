@@ -11,7 +11,12 @@ export const team = [
     image: "/images/team/ceyda_akin.webp",
     experience: 10,
   },
-
+  {
+    name: "Bahar Gürsan",
+    title: "dentist",
+    image: "/images/team/bahar_gursan.webp",
+    experience: 10,
+  },
   {
     name: "Aziz Güvenç",
     title: "dentist",
