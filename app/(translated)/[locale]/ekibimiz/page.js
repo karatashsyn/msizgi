@@ -50,7 +50,7 @@ export default async function Contact({ params: { locale } }) {
                   className={"max-w-[12.9rem] w-full min-w-0"}
                   yearWord={t("common:year")}
                   name={p.name}
-                  experience={10}
+                  experience={p.experience}
                   position={position}
                   image={p.image}
                 />

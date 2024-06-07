@@ -61,7 +61,7 @@ export default async function Pedodonti({ params: { locale } }) {
                   className="text-[#52575D] text-[0.85rem]"
                   href={"/hizmetler/implant"}
                 >
-                  {t("info-service2")}
+                  {t("info:service2")}
                 </Link>
               </li>
               <li>
@@ -101,7 +101,7 @@ export default async function Pedodonti({ params: { locale } }) {
               <h6 className="text-black text-[1.2rem] font-semibold">
                 {t("common:blog-updates-mobile")}
               </h6>
-              <div className="flex flex-col mt-[1rem]">
+              <div className="flex flex-col mt-[1rem] gap-[1rem]">
                 {blogs.map((blog) => (
                   <BlogCardSecondary key={blog?.slug} blog={blog} />
                 ))}
@@ -152,7 +152,7 @@ export default async function Pedodonti({ params: { locale } }) {
                       className={"max-w-[12.9rem] w-full min-w-0"}
                       yearWord={t("common:year")}
                       name={p.name}
-                      experience={10}
+                      experience={p.experience}
                       position={position}
                       image={p.image}
                     />
@@ -219,7 +219,7 @@ export default async function Pedodonti({ params: { locale } }) {
               <h6 className="text-black text-[1.2rem] font-semibold">
                 {t("common:blog-updates-mobile")}
               </h6>
-              <div className="flex flex-col mt-[1rem]">
+              <div className="flex flex-col mt-[1rem] gap-[1rem]">
                 {blogs.map((blog) => (
                   <BlogCardSecondary key={blog?.slug} blog={blog} />
                 ))}

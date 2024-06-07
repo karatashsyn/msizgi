@@ -260,12 +260,16 @@ export default async function Contact({ params: { locale } }) {
           </div>
           <div className="flex justify-between gap-[1rem] max-sm:hidden">
             <div className="flex gap-[1rem] basis-[50%]">
-              {blogs.slice(0, 4).map((blog) => (
-                <BlogCard key={blog.slug} blog={blog} />
+              {blogs.slice(0, 2).map((blog) => (
+                <BlogCard
+                  className={"basis-full"}
+                  key={blog.slug}
+                  blog={blog}
+                />
               ))}
             </div>
             <div className="grid grid-cols-2 gap-[1rem] basis-[50%]">
-              {blogs.slice(4, 10).map((blog) => (
+              {blogs.slice(3, 10).map((blog) => (
                 <BlogCardSecondary key={blog.slug} blog={blog} />
               ))}
             </div>
