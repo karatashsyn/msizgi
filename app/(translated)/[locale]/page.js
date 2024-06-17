@@ -49,6 +49,7 @@ export default async function Home({ params: { locale } }) {
             >
               <g filter="url(#filter0_f_0_218)">
                 <ellipse
+                  className="max-w-[100vw]"
                   cx="953.5"
                   cy="111.5"
                   rx="1331.5"
@@ -234,11 +235,11 @@ export default async function Home({ params: { locale } }) {
         </PaddedContainer>
         <section
           id="third-section"
-          className="w-screen mb-[3.45rem] max-sm:hidden"
+          className="w-full mb-[3.45rem] max-sm:hidden"
           style={{
             backgroundImage: "url('/images/third-bg.jpg')",
             backgroundPosition: "top",
-            backgroundSize: "cover",
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
         >
