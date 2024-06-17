@@ -81,7 +81,7 @@ export default async function BlogDetail({ params }) {
             <img
               className=" !w-full my-0 max-h-[24rem] object-cover "
               src={blog?.img}
-              alt="blog-topic"
+              alt={blog?.imageAlt}
             />
           </div>
           <PaddedContainer>
