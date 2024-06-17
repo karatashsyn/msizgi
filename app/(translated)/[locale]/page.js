@@ -239,7 +239,7 @@ export default async function Home({ params: { locale } }) {
           style={{
             backgroundImage: "url('/images/third-bg.jpg')",
             backgroundPosition: "top",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
         >
