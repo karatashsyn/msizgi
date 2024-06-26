@@ -22,7 +22,16 @@ const WorkingHoursInfo = ({ day, info }) => {
   );
 };
 
-const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
+const DataInfo = ({
+  count = "",
+  info = "",
+  image,
+  className,
+  infoClass,
+  alt = "",
+  width,
+  height,
+}) => {
   return (
     <div
       style={{
@@ -33,7 +42,9 @@ const DataInfo = ({ count = "", info = "", image, className, infoClass }) => {
       <img
         src={image}
         className="absolute inset-0 w-full h-full object-cover "
-        alt=""
+        alt={alt}
+        width={width}
+        height={height}
       />
       <div className="bg-[rgba(238,143,139,0.5)] absolute inset-0"></div>
       <div
@@ -75,7 +86,9 @@ export default async function Contact({ params: { locale } }) {
           <img
             src="/images/about1.png"
             className="sm:min-w-[24rem] sm:h-[35rem] max-sm:min-w-full object-cover object-center max-sm:max-h-[15.9rem] max-sm:rounded-[1.17rem]"
-            alt="#"
+            alt="Şeffaf Plak"
+            width={384}
+            height={560}
           />
           <div>
             <div>
@@ -104,7 +117,9 @@ export default async function Contact({ params: { locale } }) {
         <img
           src="/images/about2.png"
           className="absolute object-cover inset-0 h-full"
-          alt=""
+          alt="Muayene Odası"
+          width={1512}
+          height={720}
         />
         <div className="mt-[4.65rem]">
           <div className="relative z-[10] w-full max-lg:pl-[9rem] px-[17.9rem]">
@@ -124,7 +139,9 @@ export default async function Contact({ params: { locale } }) {
         <img
           src="/images/clinic4.webp"
           className="max-w-[19rem] object-cover h-[20rem] translate-x-[3.9rem]"
-          alt=""
+          alt="MSI Klinik"
+          width={304}
+          height={320}
         />
         <div className="max-w-[29rem] h-[30rem] px-[5.7rem] py-[3rem] bg-[#85D6FB]">
           <h3 className="text-[2rem] leading-[1.3] font-extrabold text-white text-center whitespace-nowrap">
@@ -188,25 +205,33 @@ export default async function Contact({ params: { locale } }) {
                 <img
                   className="sm:mt-[0.85rem] max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem] max-sm:h-full sm:min-w-[30rem] object-cover sm:h-[32.8rem]"
                   src="/images/clinic2.webp"
-                  alt=""
+                  alt="Klinik Resmi 1"
+                  width={480}
+                  height={524}
                 />
               </div>
               <img
                 src="/images/clinic1.webp"
                 className="sm:max-h-[38rem] mt-auto max-sm:h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
-                alt=""
+                alt="Klinik Resmi 2"
+                width={1080}
+                height={620}
               />
             </div>
             <div className="w-full h-[23.1rem]  max-sm:gap-[1.17rem] max-sm:flex-row max-lg:flex-col flex gap-[2.2rem] max-sm:h-[12.8rem]">
               <img
                 src="/images/clinic3.webp"
                 className="basis-full h-full max-lg:w-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
-                alt=""
+                alt="Klinik Resmi 3"
+                width={657}
+                height={369}
               />
               <img
                 src="/images/clinic4.webp"
                 className="basis-full h-full max-sm:rounded-[1.17rem] max-sm:max-w-[18.4rem]"
-                alt=""
+                alt="Klinik Resmi 4"
+                width={657}
+                height={369}
               />
             </div>
           </div>
@@ -219,20 +244,29 @@ export default async function Contact({ params: { locale } }) {
           info={t("about:perfectSmile") + "."}
           image="/images/aboutt1.png"
           className={"min-w-[35%]"}
+          alt="Gülüş 1"
+          width={529}
+          height={244}
         />
         <DataInfo
-          className={"min-w-[22.9%]"}
           key={2}
+          className={"min-w-[22.9%]"}
           count="1500"
           info={t("about:expertDoctor") + "."}
           image="/images/aboutt2.png"
+          alt="Gülüş 2"
+          width={346}
+          height={244}
         />
         <DataInfo
-          className={"basis-full"}
           key={3}
+          className={"basis-full"}
           count="1500"
           info={t("about:yearsOfExperience") + "."}
           image="/images/aboutt3.png"
+          alt="Gülüş 3"
+          width={636}
+          height={244}
         />
       </div>
       <section>

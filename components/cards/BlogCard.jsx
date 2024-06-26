@@ -13,6 +13,8 @@ export default function BlogCard({ blog, className }) {
         className="object-center  object-cover rounded-tl-[1.8rem] rounded-br-[1.8rem] w-full mb-[0.75rem] !aspect-[3/2]"
         src={blog?.img}
         alt={blog?.imageAlt}
+        width={304}
+        height={202}
       />
       <div className="max-w-full">
         <div className="mt-[0.75rem] mb-[0.25rem]"></div>

@@ -118,6 +118,8 @@ export default async function Home({ params: { locale } }) {
               <img
                 className="z-[2] animate-left-slide translate-x-[99%] h-[9rem] sm:h-[12rem] md:h-[16rem] lg:h-[20rem] xl:h-[22rem]"
                 src={"/svg/owl.svg"}
+                width="auto"
+                height={352}
                 alt="MSI Diş Kliniği Logo"
               />
             </div>
@@ -199,12 +201,16 @@ export default async function Home({ params: { locale } }) {
                   }}
                   src="/images/second-teeth.webp"
                   className="max-sm:basis-[68%] object-cover object-center max-sm:h-full w-[18rem] h-[28rem] lg:w-[27rem] lg:h-[41.9rem] max-sm:shadow-none"
-                  alt=""
+                  alt="Diş Tedavisi"
+                  width={432}
+                  height={670}
                 />
                 <img
                   src="/images/second-instrument.webp"
                   className="max-sm:basis-[32%] object-cover object-center max-sm:min-h-[26rem] w-[9rem] max-h-[22.6rem] lg:w-[13.5rem] lg:max-h-[32rem]"
-                  alt=""
+                  alt="Diş Modeli"
+                  width={216}
+                  height={502}
                 />
               </div>
             </div>
@@ -277,14 +283,18 @@ export default async function Home({ params: { locale } }) {
                       <img
                         className={`hover:scale-105 transition-all duration-300 w-full h-full`}
                         src="/images/dental-prosthesis.webp"
-                        alt=""
+                        alt="Diş Protezi"
+                        width={304}
+                        height={304}
                       />
 
                       <div className="bg-primary rounded-full w-[2.5rem] h-[2.5rem] flex absolute left-[2rem] bottom-[5.45rem] items-center justify-center">
                         <img
                           src="/svg/forward.svg"
-                          alt=""
+                          alt="Forward Arrow"
                           className="max-w-[25%] ml-1"
+                          width={10}
+                          height={18}
                         />
                       </div>
                     </div>
@@ -500,7 +510,9 @@ export default async function Home({ params: { locale } }) {
               <img
                 src="/images/home_map.png"
                 className="h-[40rem] w-full object-cover object-center"
-                alt=""
+                alt="MSI Diş Kliniği Harita"
+                width={1512}
+                height={640}
               />
             </a>
           </div>

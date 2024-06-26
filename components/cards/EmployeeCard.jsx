@@ -14,7 +14,9 @@ export default function EmployeeCard({
       <img
         src={image}
         className="max-w-full object-center object-cover  aspect-[9/10] rounded-tl-[1rem] rounded-br-[1rem]"
-        alt="Employee"
+        alt={name ?? "Ekip Üyesi"}
+        width={208}
+        height={231}
       />
       <div className="mt-[1.15rem] text-center">
         <h1 className="font-bold leading-[1rem] text-[#1B262C] text-[1.2rem] mb-[0.32rem] ">

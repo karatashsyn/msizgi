@@ -48,8 +48,10 @@ export default async function Contact({ params: { locale } }) {
             >
               <img
                 src="/images/contactmap.png"
-                alt="Contact Us"
                 className="max-w-full max-h-[27.5rem] mt-[2.9rem]"
+                alt="MSI Harita"
+                width={944}
+                height={440}
               />
             </a>
 

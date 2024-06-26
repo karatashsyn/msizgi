@@ -10,6 +10,7 @@ export default function ServiceCard({
   color = "#EF8689",
   className = "",
   href,
+  imageAlt = "",
 }) {
   const [hovered, setHovered] = useState(false);
   const router = useRouter();
@@ -30,14 +31,16 @@ export default function ServiceCard({
         className={`absolute top-6 transition-all duration-300  ${
           hovered ? "right-6 " : "right-8 opacity-0"
         }  z-[2]`}
-        alt=""
+        alt="Right Arrow"
       />
       <img
         src={image}
         className={`${
           hovered ? "scale-105" : ""
         } transition-all duration-300 absolute object-cover w-full h-full inset-0`}
-        alt=""
+        alt={imageAlt}
+        width={320}
+        height={440}
       />
       <div
         className={`${
