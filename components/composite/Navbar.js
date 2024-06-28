@@ -80,7 +80,7 @@ export default function Navbar() {
                 />
               </Link>
               <div className="flex gap-[4.8rem]">
-                <a className="flex  pointer-events-none cursor-default items-center gap-[0.5rem]">
+                <span className="flex  pointer-events-none cursor-default items-center gap-[0.5rem]">
                   <img src="/svg/clock.svg" alt="Clock Image" />
                   <span className="text-[0.9rem] font-bold whitespace-nowrap ">
                     {t("navbar-days") + ": "}
@@ -88,7 +88,7 @@ export default function Navbar() {
                       {t("navbar-hours")}
                     </span>
                   </span>
-                </a>
+                </span>
                 <a
                   href="tel:5418805050"
                   className="flex  items-center gap-[0.5rem]"
