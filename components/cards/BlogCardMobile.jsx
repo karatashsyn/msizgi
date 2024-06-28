@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export default function BlogCardMobile({ title, date, description }) {
+export default function BlogCardMobile({ title, date, description, imageAlt }) {
   return (
     <div className=" cursor-pointer">
       <img
         className="object-center  object-cover rounded-tl-md rounded-br-md w-full mb-[0.75rem] !aspect-[3/2]"
         src="/images/abouttemp.webp"
-        alt=""
+        alt={imageAlt}
       />
       <div className="max-w-full">
         <div className="mt-[0.75rem] mb-[0.25rem]"></div>

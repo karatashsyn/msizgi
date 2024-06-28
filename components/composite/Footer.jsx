@@ -54,6 +54,7 @@ export default function Footer() {
                     {t("footer-addressContent")}
                   </span>
                 )}
+                alt="Konum Sembolü"
               />
               <CartInfo
                 icon="/svg/footer-phone-icon.svg"
@@ -65,6 +66,7 @@ export default function Footer() {
                     </span>
                   </>
                 )}
+                alt="Telefon Sembolü"
               />
               <CartInfo
                 icon="/svg/footer-clock-icon.svg"
@@ -75,6 +77,7 @@ export default function Footer() {
                     <span className="font-bold"> 9:00-18:00</span>
                   </>
                 )}
+                alt="Saat Sembolü"
               />
             </div>
           </div>
@@ -98,7 +101,7 @@ export default function Footer() {
                 href={"/iletisim"}
                 className="flex items-center gap-[0.2rem] text-primary-bright whitespace-nowrap  font-semibold  text-[0.85rem]"
               >
-                <img src="/svg/caret-right.svg" alt="#" />
+                <img src="/svg/caret-right.svg" alt="Caret Right Icon" />
                 {t("footer-createAppointment")}
               </a>
               <a

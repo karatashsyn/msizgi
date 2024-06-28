@@ -7,7 +7,6 @@ import EmployeeCard from "@/components/cards/EmployeeCard";
 import InfoBox from "@/components/InfoBox";
 import ServiceCardMobile from "@/components/cards/ServiceCardMobile";
 import BlogCard from "@/components/cards/BlogCard";
-import BlogCardMobile from "@/components/cards/BlogCardMobile";
 import { team } from "@/data";
 import { getBlogs } from "@/services/blog";
 import Link from "next/link";
@@ -387,6 +386,7 @@ export default async function Home({ params: { locale } }) {
                 image={"/images/service1.webp"}
                 description={t("services:serviceDescription1")}
                 href="pedodonti"
+                imageAlt={t("services:serviceTitle1")}
               />
               <ServiceCardMobile
                 color="#85D6FB"
@@ -394,6 +394,7 @@ export default async function Home({ params: { locale } }) {
                 image={"/images/service2.webp"}
                 description={t("services:serviceDescription2")}
                 href="implant"
+                imageAlt={t("services:serviceTitle2")}
               />
               <ServiceCardMobile
                 color="#FFEF89"
@@ -401,6 +402,7 @@ export default async function Home({ params: { locale } }) {
                 image={"/images/service4.webp"}
                 description={t("services:serviceDescription3")}
                 href="ortodonti"
+                imageAlt={t("services:serviceTitle3")}
               />
               <ServiceCardMobile
                 color="#EF8689"
@@ -409,6 +411,7 @@ export default async function Home({ params: { locale } }) {
                 description={t("services:serviceDescription4")}
                 className="mr-6"
                 href="dis-beyazlatma"
+                imageAlt={t("services:serviceTitle4")}
               />
               <ServiceCardMobile
                 color="#85D6FB"
@@ -417,6 +420,7 @@ export default async function Home({ params: { locale } }) {
                 description={t("services:serviceDescription4")}
                 className="mr-6"
                 href="restoratif-dis-hekimligi"
+                imageAlt={t("services:serviceTitle5")}
               />
             </div>
           </div>

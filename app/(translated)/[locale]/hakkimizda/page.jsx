@@ -2,10 +2,8 @@
 import initTranslations from "@/app/i18n";
 import AppointmentButton from "@/components/buttons/AppointmentButton";
 import BlogCard from "@/components/cards/BlogCard";
-import BlogCardMobile from "@/components/cards/BlogCardMobile";
 import BlogCardSecondary from "@/components/cards/BlogCardSecondary";
 import PaddedContainer from "@/components/composite/PaddedContainer";
-import PageGradient from "@/components/PageGradient";
 import { getBlogs } from "@/services/blog";
 
 const WorkingHoursInfo = ({ day, info }) => {
