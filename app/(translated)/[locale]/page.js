@@ -508,7 +508,7 @@ export default async function Home({ params: { locale } }) {
               href="https://www.google.com/maps/place/Mehmet+Said+%C4%B0ZG%C4%B0+Di%C5%9F+Klini%C4%9Fi/@40.9926593,28.8451086,17z/data=!3m1!4b1!4m6!3m5!1s0x14cabb959e47b669:0xb4d1b2ae2db02431!8m2!3d40.9926593!4d28.8476835!16s%2Fg%2F11hz2jp71b?entry=ttu"
             >
               <img
-                src="/images/home_map.png"
+                src="/images/home_map.webp"
                 className="h-[40rem] w-full object-cover object-center"
                 alt="MSI Diş Kliniği Harita"
                 width={1512}

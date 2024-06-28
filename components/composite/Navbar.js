@@ -73,7 +73,7 @@ export default function Navbar() {
                 <Image
                   unoptimized={true}
                   className="w-[7.4rem] min-w-[6rem]  cursor-pointer"
-                  src="/images/navsmall.png "
+                  src="/images/navsmall.webp "
                   alt="/"
                   width={148}
                   height={66}
@@ -104,9 +104,11 @@ export default function Navbar() {
                   className="flex  items-center gap-[0.5rem]"
                 >
                   <img src="/svg/location.svg" alt="Clock Image" />
-                  <span className="text-[0.9rem] font-bold whitespace-nowrap ">
-                    {t("navbar-address")}
-                  </span>
+                  <div id="address" className=" ">
+                    <p className="text-[0.9rem] font-bold whitespace-nowrap">
+                      {t("navbar-address")}
+                    </p>
+                  </div>
                 </a>
               </div>
             </PaddedContainer>
@@ -172,7 +174,7 @@ export default function Navbar() {
                 >
                   <img
                     className="-translate-y-2 max-w-[1.8rem]"
-                    src="/images/owl_white.png"
+                    src="/images/owl_white.webp"
                   />
                 </div>
               </div>

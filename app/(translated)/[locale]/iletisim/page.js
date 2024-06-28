@@ -47,7 +47,7 @@ export default async function Contact({ params: { locale } }) {
               target="_blank"
             >
               <img
-                src="/images/contactmap.png"
+                src="/images/contactmap.webp"
                 className="max-w-full max-h-[27.5rem] mt-[2.9rem]"
                 alt="MSI Harita"
                 width={944}

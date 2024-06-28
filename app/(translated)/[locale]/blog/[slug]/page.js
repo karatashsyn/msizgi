@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
         {
           url: blog?.img
             ? blog?.img
-            : "https://mehmetsaidizgi.com/opengraph-image.png",
+            : "https://mehmetsaidizgi.com/opengraph-image.webp",
           width: 800,
           height: 600,
           alt: blog?.title ? blog?.title : "MSI - Diş Kliniği",

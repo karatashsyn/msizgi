@@ -127,16 +127,16 @@ export default async function Pedodonti({ params: { locale } }) {
               <img
                 alt="Pedodonti"
                 className="w-full max-h-[24rem] object-cover"
-                src="/images/info/i11.png"
+                src="/images/info/i11.webp"
               />
               <div className=" flex mt-[1rem] max-w-full gap-[1rem]">
-                {/* 5images from i12.png to i16.png */}
+                {/* 5images from i12.webp to i16.webp */}
                 {[...Array(5)].map((_, i) => (
                   <img
                     key={i}
                     alt="Pedodonti"
                     className="overflow-hidden object-cover"
-                    src={`/images/info/i${i + 12}.png`}
+                    src={`/images/info/i${i + 12}.webp`}
                   />
                 ))}
               </div>

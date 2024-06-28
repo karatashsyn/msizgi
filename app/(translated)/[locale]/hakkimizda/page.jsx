@@ -84,7 +84,7 @@ export default async function Contact({ params: { locale } }) {
         </p>
         <div className="flex justify-between gap-[3.4rem] max-sm:flex-col">
           <img
-            src="/images/about1.png"
+            src="/images/about1.webp"
             className="sm:min-w-[24rem] sm:h-[35rem] max-sm:min-w-full object-cover object-center max-sm:max-h-[15.9rem] max-sm:rounded-[1.17rem]"
             alt="Şeffaf Plak"
             width={384}
@@ -115,8 +115,8 @@ export default async function Contact({ params: { locale } }) {
       </PaddedContainer>
       <div className="relative h-[45rem] w-full flex mt-[5.3rem] max-sm:hidden">
         <img
-          src="/images/about2.png"
-          className="absolute object-cover inset-0 h-full"
+          src="/images/about2.webp"
+          className="absolute object-cover w-[100vw] inset-0 h-full"
           alt="Muayene Odası"
           width={1512}
           height={720}
@@ -196,7 +196,7 @@ export default async function Contact({ params: { locale } }) {
               {t("about:clinicParagraph")}
             </span>
           </div>
-          <div className="max-sm:flex gap-[1.17rem] overflow-x-scroll">
+          <div className="max-sm:flex gap-[1.17rem] max-sm:overflow-x-scroll sm:overflow-hidden">
             <div className="sm:mt-[1.75rem] max-sm:gap-[1.17rem] flex max-sm:flex-row max-lg:flex-col justify-between gap-[2.05rem] mb-[3.15rem] max-sm:h-[12.8rem]">
               <div className="flex sm:flex-col justify-between max-sm:h-full">
                 <span className="text-[#52575D] max-sm:hidden w-full max-sm:text-[1.25rem]">
@@ -242,7 +242,7 @@ export default async function Contact({ params: { locale } }) {
           key={1}
           count="1500"
           info={t("about:perfectSmile") + "."}
-          image="/images/aboutt1.png"
+          image="/images/aboutt1.webp"
           className={"min-w-[35%]"}
           alt="Gülüş 1"
           width={529}
@@ -253,7 +253,7 @@ export default async function Contact({ params: { locale } }) {
           className={"min-w-[22.9%]"}
           count="1500"
           info={t("about:expertDoctor") + "."}
-          image="/images/aboutt2.png"
+          image="/images/aboutt2.webp"
           alt="Gülüş 2"
           width={346}
           height={244}
@@ -263,7 +263,7 @@ export default async function Contact({ params: { locale } }) {
           className={"basis-full"}
           count="1500"
           info={t("about:yearsOfExperience") + "."}
-          image="/images/aboutt3.png"
+          image="/images/aboutt3.webp"
           alt="Gülüş 3"
           width={636}
           height={244}

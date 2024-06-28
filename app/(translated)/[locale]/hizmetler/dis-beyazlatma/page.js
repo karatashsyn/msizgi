@@ -128,7 +128,7 @@ export default async function Pedodonti({ params: { locale } }) {
                 src="/images/info/dis_beyazlatma/2.webp"
               />
               <div className=" flex mt-[1rem] max-w-full gap-[1rem]">
-                {/* 5images from i22.png to i26.png */}
+                {/* 5images from i22.webp to i26.webp */}
                 {[...Array(5)].map((_, i) => (
                   <img
                     key={i}

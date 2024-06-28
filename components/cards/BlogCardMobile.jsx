@@ -6,7 +6,7 @@ export default function BlogCardMobile({ title, date, description }) {
     <div className=" cursor-pointer">
       <img
         className="object-center  object-cover rounded-tl-md rounded-br-md w-full mb-[0.75rem] !aspect-[3/2]"
-        src="/images/abouttemp.png"
+        src="/images/abouttemp.webp"
         alt=""
       />
       <div className="max-w-full">

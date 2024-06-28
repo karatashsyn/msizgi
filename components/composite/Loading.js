@@ -11,7 +11,7 @@ const BlinkingOwl = () => {
           <div className=" w-[13.4px] h-[13.4px] bg-primary animate-blink"></div>
         </div>
       </div>
-      <img width={60} src="/images/loader.png" alt="" />
+      <img width={60} src="/images/loader.webp" alt="" />
     </div>
   );
 };
