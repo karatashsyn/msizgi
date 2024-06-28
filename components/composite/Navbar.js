@@ -175,6 +175,7 @@ export default function Navbar() {
                   <img
                     className="-translate-y-2 max-w-[1.8rem]"
                     src="/images/owl_white.webp"
+                    alt="Owl Image"
                   />
                 </div>
               </div>

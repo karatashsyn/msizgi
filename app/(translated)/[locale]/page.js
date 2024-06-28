@@ -171,7 +171,7 @@ export default async function Home({ params: { locale } }) {
           <section id="second-section">
             <div className="w-full sm:flex sm:space-between items-center gap-[4.65rem] sm:pt-[7.5rem] max-sm:pb-[2.34rem] sm:pb-[5.65rem]">
               <div className="mt-[5rem] pl-12 lg:basis-[32%] basis-[44%] max-sm:hidden">
-                <h2
+                <h3
                   className="font-bold"
                   style={{
                     fontSize: "2rem",
@@ -181,7 +181,7 @@ export default async function Home({ params: { locale } }) {
                   dangerouslySetInnerHTML={{
                     __html: t("second-main"),
                   }}
-                ></h2>
+                ></h3>
                 <p
                   className="mt-[2.55rem]"
                   style={{
@@ -215,7 +215,7 @@ export default async function Home({ params: { locale } }) {
             </div>
             <PaddedContainer className={"mb-[4.14rem]"}>
               <div className="sm:mt-[5rem] sm:hidden ">
-                <h2
+                <h3
                   className="font-bold text-[2.31rem]"
                   style={{
                     lineHeight: "1",
@@ -224,7 +224,7 @@ export default async function Home({ params: { locale } }) {
                   dangerouslySetInnerHTML={{
                     __html: t("second-main"),
                   }}
-                ></h2>
+                ></h3>
                 <p
                   className="mt-[1.87rem] text-[1.56rem] max-sm:border-b-[1px] max-sm:border-b-[#52575d53] max-sm:pb-[2rem]"
                   style={{
@@ -251,7 +251,7 @@ export default async function Home({ params: { locale } }) {
           <PaddedContainer containerClassName={"!overflow-visible"}>
             <div className="w-full flex space-between items-center gap-[4.65rem] pt-[6rem] ">
               <div>
-                <h2
+                <h3
                   style={{
                     letterSpacing: "-0.10rem",
                   }}
@@ -259,7 +259,7 @@ export default async function Home({ params: { locale } }) {
                   dangerouslySetInnerHTML={{
                     __html: t("third-header"),
                   }}
-                ></h2>
+                ></h3>
                 <p
                   className="mt-[1rem] text-[0.85rem] w-[24rem] font-bold text-white leading-[1.3rem]"
                   dangerouslySetInnerHTML={{
@@ -317,9 +317,9 @@ export default async function Home({ params: { locale } }) {
           >
             <div className="flex gap-[2.8rem] items-center">
               <div className="max-w-min pb-[2rem]">
-                <h2 className="text-[#1B262C] font-extrabold text-[3rem] mb-[1.05rem]">
+                <h3 className="text-[#1B262C] font-extrabold text-[3rem] mb-[1.05rem]">
                   {t("fourth-primary")}
-                </h2>
+                </h3>
                 <p className="text-[0.85rem] text-[#52575D] mb-[2.15rem]">
                   {t("fourth-secondary")}
                 </p>
@@ -370,9 +370,9 @@ export default async function Home({ params: { locale } }) {
           </PaddedContainer>
           <div>
             <PaddedContainer className={"sm:hidden"}>
-              <h2 className=" text-[#1B262C] font-extrabold text-[2.031rem] mb-[0.64rem]">
+              <h3 className=" text-[#1B262C] font-extrabold text-[2.031rem] mb-[0.64rem]">
                 {t("fourth-primary")}
-              </h2>
+              </h3>
               <p className="text-[1.32rem] font-semibold text-[#52575D] mb-[2.34rem]">
                 {t("fourth-secondary")}
               </p>
@@ -482,9 +482,9 @@ export default async function Home({ params: { locale } }) {
                   }}
                 >
                   <div className="mb-[2.2rem]">
-                    <h2 className="text-[3rem] text-white font-extrabold">
+                    <h3 className="text-[3rem] text-white font-extrabold">
                       {t("sixth-primary")}
-                    </h2>
+                    </h3>
                   </div>
                   <div className="flex max-lg:flex-col max-lg:gap-[3rem] justify-center lg:gap-[1rem]">
                     <InfoBox
@@ -524,9 +524,9 @@ export default async function Home({ params: { locale } }) {
       </div>
       <section className="sm:hidden mb-8">
         <PaddedContainer>
-          <h2 className="text-[#1B262C] font-bold text-[2.5rem] mb-[1.40rem]">
+          <h3 className="text-[#1B262C] font-bold text-[2.5rem] mb-[1.40rem]">
             {t("blog")}
-          </h2>
+          </h3>
           <div className="flex gap-[1rem] overflow-x-scroll pb-[2rem]">
             {blogs.slice(0, 4).map((blog) => (
               <BlogCard
