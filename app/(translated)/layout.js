@@ -5,6 +5,7 @@ import TranslationProvider from "@/components/TranslationProvider";
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./../globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "MSI Diş Kliniği",
@@ -82,6 +83,7 @@ s0.parentNode.insertBefore(s1,s0);
   gtag('config', 'G-5NHC71DKFQ');
   `}
         </Script>
+        <Analytics />
       </body>
     </html>
   );
