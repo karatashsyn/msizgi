@@ -69,6 +69,19 @@ s0.parentNode.insertBefore(s1,s0);
         >
           <Footer />
         </TranslationProvider>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5NHC71DKFQ"
+        ></Script>
+        <Script id="gAnalyticsScripts" strategy="afterInteractive">
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5NHC71DKFQ');
+  `}
+        </Script>
       </body>
     </html>
   );
