@@ -8,6 +8,13 @@ import { getBlogs } from "@/services/blog";
 
 export const revalidate = 3600;
 
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["blog"]);
+  return {
+    title: `${t("blog:blog")} - Mehmet Said İzgi`,
+  };
+}
+
 export default async function Blog({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["blog", "common"]);
 

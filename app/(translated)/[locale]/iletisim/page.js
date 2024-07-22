@@ -4,6 +4,13 @@ import AppointmentButton from "@/components/buttons/AppointmentButton";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
 
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["contact"]);
+  return {
+    title: `${t("contact:contactUs")} - Mehmet Said İzgi`,
+  };
+}
+
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["contact", "common"]);
   return (

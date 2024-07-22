@@ -62,10 +62,18 @@ const DataInfo = ({
   );
 };
 
-export const revalidate = 10800;
+export const revalidate = 108000;
+
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["about"]);
+  return {
+    title: `${t("about:aboutUs")} - Mehmet Said İzgi`,
+  };
+}
 
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["about", "common"]);
+
   const blogs = await getBlogs("");
   if (!blogs.length) {
     notFound();

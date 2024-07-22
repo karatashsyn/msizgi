@@ -22,7 +22,7 @@ export const metadata = {
     url: "https://mehmetsaidizgi.com",
     images: [
       {
-        url: "https://mehmetsaidizgi.com/opengraph-image.webp",
+        url: "https://mehmetsaidizgi.com/opengraph-image.png",
         width: 800,
         height: 600,
         alt: "MSI - Diş Kliniği",

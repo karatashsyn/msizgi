@@ -4,6 +4,13 @@ import ServiceCard from "@/components/cards/ServiceCard";
 import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
 
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["services"]);
+  return {
+    title: `${t("services:treatments")} - Mehmet Said İzgi`,
+  };
+}
+
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["services", "common"]);
   return (

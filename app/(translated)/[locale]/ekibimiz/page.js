@@ -5,6 +5,13 @@ import PaddedContainer from "@/components/composite/PaddedContainer";
 import PageGradient from "@/components/PageGradient";
 import { team } from "@/data";
 
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["team"]);
+  return {
+    title: `${t("team:team")} - Mehmet Said İzgi`,
+  };
+}
+
 export default async function Contact({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["team", "common"]);
   return (

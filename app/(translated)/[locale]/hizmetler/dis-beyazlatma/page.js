@@ -9,9 +9,15 @@ import Link from "next/link";
 
 export const revalidate = 3600;
 
+export async function generateMetadata({ params: { locale } }) {
+  const { t } = await initTranslations(locale, ["info"]);
+  return {
+    title: `${t("info:service3-title").split("<")[0]} - Mehmet Said İzgi`,
+  };
+}
+
 export default async function Pedodonti({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["blog", "common", "info"]);
-
   const blogs = await getBlogs("");
 
   return (
