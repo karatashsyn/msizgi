@@ -8,6 +8,9 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["services"]);
   return {
     title: `${t("services:treatments")} - Mehmet Said İzgi`,
+    alternates: {
+      canonical: "https://mehmetsaidizgi.com/tedaviler",
+    },
   };
 }
 

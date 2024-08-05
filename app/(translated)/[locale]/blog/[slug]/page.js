@@ -32,6 +32,9 @@ export async function generateMetadata({ params }) {
         )[0].children[0].text,
 
     modifiedTime: blog?.date ? blog?.date : "",
+    alternates:{
+      canonical: "https://mehmetsaidizgi.com/blog/" + blog?.slug,
+    },
     openGraph: {
       metadataBase: new URL("https://mehmetsaidizgi.com"),
       siteName: "MSI - Diş Kliniği",

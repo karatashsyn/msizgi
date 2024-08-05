@@ -52,10 +52,10 @@ export default function ServiceCard({
         }}
       ></div>
       <div className="absolute inset-0 flex p-[1.1rem] pb-[2.5rem] max-sm:pb-[2rem] max-sm:px-[0.6rem] flex-col justify-end gap-[0.4rem]">
-        <h1
+        <span
           className="text-[1.5rem] font-bold text-white leading-[1.8rem]"
           dangerouslySetInnerHTML={{ __html: title }}
-        ></h1>
+        ></span>
         <p
           dangerouslySetInnerHTML={{ __html: description }}
           className="text-[#F2F7FF] font-regular text-[0.85rem] leading-[1.2]"

@@ -19,12 +19,12 @@ export default function EmployeeCard({
         height={231}
       />
       <div className="mt-[1.15rem] text-center">
-        <h1 className="font-bold leading-[1rem] text-[#1B262C] text-[1.2rem] mb-[0.32rem] ">
+        <span className="font-bold leading-[1rem] text-[#1B262C] text-[1.2rem] mb-[0.32rem] ">
           {name}
-        </h1>
-        <h2 className="text-[#FF8989] text-[0.85rem] leading-[1rem] font-bold mb-[0.462rem]">
+        </span>
+        <span className="block text-[#FF8989] text-[0.85rem] leading-[1rem] font-bold mb-[0.462rem]">
           {position}
-        </h2>
+        </span>
         <p className="text-[#52575D] leading-[1rem] text-[0.85rem]">
           +{experience + " " + yearWord}
         </p>

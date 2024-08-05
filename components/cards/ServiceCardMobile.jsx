@@ -35,10 +35,10 @@ export default function ServiceCardMobile({
       ></div>
       <div className="absolute inset-0 flex px-[0.67rem] pt-[1.4rem] pb-[1.17rem] flex-col justify-between gap-[0.4rem]">
         <div className="flex flex-col gap-[1rem]">
-          <h1
+          <span
             className="text-[1.875rem] font-bold text-white leading-[1.9rem]"
             dangerouslySetInnerHTML={{ __html: title }}
-          ></h1>
+          ></span>
           <p
             dangerouslySetInnerHTML={{ __html: description }}
             className="text-[#F2F7FF] font-regular text-[1.25rem] leading-[1.2]"

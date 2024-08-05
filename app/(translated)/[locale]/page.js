@@ -11,9 +11,12 @@ import { team } from "@/data";
 import { getBlogs } from "@/services/blog";
 import Link from "next/link";
 
-export const metaData = {
+export const metadata = {
   title: "MSI Diş Kliniği",
   description: "MSI Diş Kliniği",
+  alternates: {
+    canonical: "https://mehmetsaidizgi.com",
+  }
 };
 export const revalidate = 10800;
 
@@ -329,6 +332,7 @@ export default async function Home({ params: { locale } }) {
                   image={"/images/service1.webp"}
                   description={t("services:serviceDescription1")}
                   href="pedodonti"
+                  imageAlt={t("services:serviceTitle1")}
                 />
               </div>
 
@@ -340,6 +344,7 @@ export default async function Home({ params: { locale } }) {
                     image={"/images/service2.webp"}
                     description={t("services:serviceDescription2")}
                     href={"implant"}
+                    imageAlt={t("services:serviceTitle2")}
                   />
                   <ServiceCard
                     color="#85D6FB"
@@ -347,6 +352,7 @@ export default async function Home({ params: { locale } }) {
                     image={"/images/service4.webp"}
                     description={t("services:serviceDescription3")}
                     href={"ortodonti"}
+                    imageAlt={t("services:serviceTitle3")}
                   />
                 </div>
                 <div className="flex flex-col translate-y-4 gap-[2.8rem]">
@@ -356,6 +362,7 @@ export default async function Home({ params: { locale } }) {
                     image={"/images/service3.webp"}
                     description={t("services:serviceDescription4")}
                     href={"dis-beyazlatma"}
+                    imageAlt={t("services:serviceTitle4")}
                   />
                   <ServiceCard
                     color="#FFEF89"
@@ -363,6 +370,7 @@ export default async function Home({ params: { locale } }) {
                     image={"/images/service5.webp"}
                     description={t("services:serviceDescription5")}
                     href={"restoratif-dis-hekimligi"}
+                    imageAlt={t("services:serviceTitle5")}
                   />
                 </div>
               </div>

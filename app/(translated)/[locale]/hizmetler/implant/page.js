@@ -13,6 +13,9 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service2-title").split("<")[0]} - Mehmet Said İzgi`,
+    alternates:{
+      canonical: "https://mehmetsaidizgi.com/hizmetler/implant",
+    }
   };
 }
 
