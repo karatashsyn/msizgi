@@ -279,11 +279,11 @@ h2 span {
 }
 
 .blog-content p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .blog-content p strong {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .blog-content em {
@@ -312,7 +312,7 @@ h2 span {
 }
 
 .blog-content h6 strong {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .loading {
