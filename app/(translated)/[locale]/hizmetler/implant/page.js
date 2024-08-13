@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service2-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:'Eksik dişleriniz için kalıcı bir çözüm: Dental implantlar ile doğal görünüm ve işlevselliği geri kazanın. Fiyat ve detaylar için bizimle iletişime geçin.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/implant",
     }

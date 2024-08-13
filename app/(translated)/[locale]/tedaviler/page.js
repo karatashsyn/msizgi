@@ -8,6 +8,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["services"]);
   return {
     title: `${t("services:treatments")} - Mehmet Said İzgi`,
+    description:'İmplant, kanal tedavisi, zirkonyum kaplama ve estetik diş hekimliği dahil, sağlıklı ve estetik bir gülüş için sunduğumuz tüm diş tedavi seçeneklerini keşfedin.',
     alternates: {
       canonical: "https://mehmetsaidizgi.com/tedaviler",
     },

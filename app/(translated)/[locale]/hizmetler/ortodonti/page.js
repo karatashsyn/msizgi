@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service4-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:'Diş teli ve diğer ortodontik tedavilerle düzgün dişler ve mükemmel bir gülüş elde edin. Her yaşa uygun çözümler.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/ortodonti",
     }

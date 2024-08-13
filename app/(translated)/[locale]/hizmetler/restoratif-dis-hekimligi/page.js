@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service6-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:"Restoratif diş hekimliği ile hasarlı dişlerinizi onarın ve sağlıklı bir ağız yapısına kavuşun. Estetik ve işlevselliği bir arada sunuyoruz.",
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/restoratif-dis-hekimligi",
     }

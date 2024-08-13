@@ -9,6 +9,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["team"]);
   return {
     title: `${t("team:team")} - Mehmet Said İzgi`,
+    description:'Deneyimli ve uzman diş hekimlerimiz, modern teknikler ve kişiye özel yaklaşımlarla diş sağlığınızı korur ve estetik çözümler sunar. Ekibimizi tanıyın ve güvencemizi keşfedin.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/ekibimiz",
     }

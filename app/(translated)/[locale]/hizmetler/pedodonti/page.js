@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service1-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:'Çocuklar için özel diş tedavileri: Pedodonti ile miniklerin diş sağlığını güvenle koruyun ve geleceğe yatırım yapın.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/pedodonti",
     }

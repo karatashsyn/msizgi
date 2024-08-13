@@ -9,8 +9,6 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "MSI Diş Kliniği",
-  description:
-    "Mehmet Said İzgi Diş Kliniği, profesyonel diş hekimleri ve son teknoloji ekipmanları ile diş sağlığınızı en üst düzeyde korur. Estetik diş hekimliği, ortodonti, implant ve genel diş bakımı hizmetlerimizle sağlıklı gülüşlere kavuşun. Kliniğimizde randevu alın ve ağrısız tedavi deneyimi yaşayın.",
   metadataBase: new URL("https://mehmetsaidizgi.com"),
   openGraph: {
     siteName: "MSI - Diş Kliniği",

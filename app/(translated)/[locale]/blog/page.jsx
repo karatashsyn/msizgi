@@ -12,6 +12,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["blog"]);
   return {
     title: `${t("blog:blog")} - Mehmet Said İzgi`,
+    description:'Son diş tedavi yöntemleri, ağız sağlığı ipuçları ve estetik çözümler hakkında güncel bilgiler için blogumuzu takip edin. Sağlıklı ve güzel bir gülüş için öneriler burada.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/blog",
     }

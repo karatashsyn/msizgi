@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
         )[0].children[0].text,
 
     modifiedTime: blog?.date ? blog?.date : "",
-    alternates:{
+    alternates: {
       canonical: "https://mehmetsaidizgi.com/blog/" + blog?.slug,
     },
     openGraph: {

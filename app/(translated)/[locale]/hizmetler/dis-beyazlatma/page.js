@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service3-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:'Diş beyazlatma ile daha beyaz ve parlak bir gülüşe kavuşun. Güvenli ve etkili diş beyazlatma yöntemleriyle dişleriniz birkaç ton daha açılabilir.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/dis-beyazlatma",
     }

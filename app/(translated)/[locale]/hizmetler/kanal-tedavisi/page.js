@@ -13,6 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["info"]);
   return {
     title: `${t("info:service5-title").split("<")[0]} - Mehmet Said İzgi`,
+    description:'Kanal tedavisi ile dişlerinizin sağlığını koruyun ve ağrısız bir tedavi süreciyle doğal dişlerinizi kurtarın. Detaylı bilgi için tıklayın.',
     alternates:{
       canonical: "https://mehmetsaidizgi.com/hizmetler/kanal-tedavisi",
     }

@@ -8,6 +8,7 @@ export async function generateMetadata({ params: { locale } }) {
   const { t } = await initTranslations(locale, ["contact"]);
   return {
     title: `${t("contact:contactUs")} - Mehmet Said İzgi`,
+    description:'Randevu almak, sorularınızı sormak ve tedavi seçenekleri hakkında bilgi almak için bizimle kolayca iletişime geçin. Sağlıklı bir gülüş için buradayız.',
     alternates: {
       canonical: "https://mehmetsaidizgi.com/iletisim",
     },
