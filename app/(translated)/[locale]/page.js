@@ -13,10 +13,11 @@ import Link from "next/link";
 
 export const metadata = {
   title: "MSI Diş Kliniği",
-  description: "Mehmet Said İzgi Diş Kliniği: İmplant, kanal tedavisi, zirkonyum kaplama ve estetik diş hekimliği alanında uzman ekibimizle, kişiye özel çözümler sunuyoruz.",
+  description:
+    "Mehmet Said İzgi Diş Kliniği: İmplant, kanal tedavisi, zirkonyum kaplama ve estetik diş hekimliği alanında uzman ekibimizle, kişiye özel çözümler sunuyoruz.",
   alternates: {
     canonical: "www.mehmetsaidizgi.com",
-  }
+  },
 };
 export const revalidate = 10800;
 
