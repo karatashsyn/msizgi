@@ -22,20 +22,6 @@ export async function generateMetadata({ params }) {
     (item) => item._type === "block" && item.children[0]?.text
   );
 
-  // /** @type {import('schema-dts').BlogPosting} */
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    name: blog?.title,
-    author: {
-      "@type": "Person",
-      name: "Mehmet Said İzgi",
-    },
-    dateModified: blog?.date,
-    image: blog?.img,
-    description: blog?.description,
-  };
-
   return {
     title: blog ? blog?.title : "MSI - Diş Kliniği",
     metadataBase: new URL("https://mehmetsaidizgi.com"),
@@ -85,6 +71,19 @@ export default async function BlogDetail({ params }) {
   if (!blog) {
     notFound();
   }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    name: blog?.title,
+    author: {
+      "@type": "Person",
+      name: "Mehmet Said İzgi",
+    },
+    dateModified: blog?.date,
+    image: blog?.img,
+    description: blog?.description,
+  };
   return (
     <main>
       <script
