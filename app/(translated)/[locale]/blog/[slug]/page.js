@@ -84,6 +84,7 @@ export default async function BlogDetail({ params }) {
     image: blog?.img,
     description: blog?.description,
   };
+
   return (
     <main>
       <script

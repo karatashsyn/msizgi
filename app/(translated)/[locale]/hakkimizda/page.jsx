@@ -261,7 +261,7 @@ export default async function Contact({ params: { locale } }) {
         <DataInfo
           key={2}
           className={"min-w-[22.9%]"}
-          count="1500"
+          count="5"
           info={t("about:expertDoctor") + "."}
           image="/images/aboutt2.webp"
           alt="Gülüş 2"
@@ -271,7 +271,7 @@ export default async function Contact({ params: { locale } }) {
         <DataInfo
           key={3}
           className={"basis-full"}
-          count="1500"
+          count="15"
           info={t("about:yearsOfExperience") + "."}
           image="/images/aboutt3.webp"
           alt="Gülüş 3"
